@@ -1,5 +1,9 @@
 import { Project, SkillCategory, EducationItem, ExperienceItem, CertificationItem, AchievementItem } from '../types/portfolio';
 
+// Dynamic base path for GitHub Pages and local development
+const rawBaseUrl = (import.meta as { env?: { BASE_URL?: string } })?.env?.BASE_URL || '/';
+const baseUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl : `${rawBaseUrl}/`;
+
 export const personalInfo = {
   name: "Gaurav Patel",
   fullName: "Patel Gaurav Dinesh",
