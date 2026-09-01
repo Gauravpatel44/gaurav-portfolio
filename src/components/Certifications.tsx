@@ -127,7 +127,7 @@ export const Certifications: React.FC = () => {
                       src={cert.imageUrl}
                       alt={cert.title}
                       className="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500"
-                      loading="lazy"
+                      loading="eager"
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
                       <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-obsidian-900 border-2 border-electric-cyan text-[11px] font-black text-white shadow-glow-cyan">
@@ -245,7 +245,7 @@ export const Certifications: React.FC = () => {
                     src={cert.imageUrl}
                     alt={cert.title}
                     className="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500"
-                    loading="lazy"
+                    loading="eager"
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
                     <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-obsidian-900 border-2 border-electric-cyan text-xs font-black text-white shadow-glow-cyan">
