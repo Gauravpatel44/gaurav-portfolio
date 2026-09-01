@@ -45,6 +45,7 @@ export interface Project {
   githubUrl: string;
   liveUrl?: string;
   architecture?: string[];
+  isOpenSource?: boolean;
 }
 
 export interface ExperienceItem {
