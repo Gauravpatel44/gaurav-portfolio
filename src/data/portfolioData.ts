@@ -31,26 +31,25 @@ export const personalInfo: PersonalInfo = {
   averageSpi: 9.07,
 };
 
-export const educationData: EducationItem[] = [
-  {
-    institution: 'Government Polytechnic Valsad',
-    degree: 'Diploma in Information Technology',
-    period: '2024 – 2027',
-    location: 'Valsad, Gujarat, India',
-    status: 'Currently Pursuing (Semester 4 Completed)',
-    semesters: [
-      { semester: 'Semester 1', spi: 8.95, status: 'Completed' },
-      { semester: 'Semester 2', spi: 9.00, status: 'Completed' },
-      { semester: 'Semester 3', spi: 9.00, status: 'Completed' },
-      { semester: 'Semester 4', spi: 9.35, status: 'Completed', highlight: true }
-    ],
-    highlights: [
-      'Top academic percentile with consistent 9.0+ SPI throughout curriculum',
-      'Specialized in Object-Oriented Programming, Database Management, and Network Security',
-      'Actively applied classroom theoretical concepts to production open-source applications'
-    ]
-  }
-];
+export const educationData: EducationItem = {
+  institution: 'Government Polytechnic Valsad',
+  degree: 'Diploma in Information Technology',
+  period: '2024 – 2027',
+  location: 'Valsad, Gujarat, India',
+  status: 'Currently Pursuing (Semester 4 Completed)',
+  description: 'Top academic percentile student pursuing diploma coursework with heavy hands-on software development focus.',
+  semesters: [
+    { semester: 'Semester 1', spi: 8.95, status: 'Completed' },
+    { semester: 'Semester 2', spi: 9.00, status: 'Completed' },
+    { semester: 'Semester 3', spi: 9.00, status: 'Completed' },
+    { semester: 'Semester 4', spi: 9.35, status: 'Completed', highlight: true }
+  ],
+  highlights: [
+    'Top academic percentile with consistent 9.0+ SPI throughout curriculum',
+    'Specialized in Object-Oriented Programming, Database Management, and Network Security',
+    'Actively applied classroom theoretical concepts to production open-source applications'
+  ]
+};
 
 export const skillCategories: SkillCategory[] = [
   {
@@ -301,24 +300,30 @@ export const certificationData: CertificationItem[] = [
 
 export const achievementsData: AchievementItem[] = [
   {
+    id: '1',
     title: 'Semester 4 Top Academic Ranking (9.35 SPI)',
     organization: 'Government Polytechnic Valsad',
     date: '2025',
     category: 'Academic',
-    description: 'Achieved a peak semester performance index of 9.35, placing among the top percentile in the Diploma Information Technology cohort.'
+    description: 'Achieved a peak semester performance index of 9.35, placing among the top percentile in the Diploma Information Technology cohort.',
+    metric: '9.35 SPI'
   },
   {
+    id: '2',
     title: 'Completed VOIS & Edunet Project-4 Challenge',
     organization: 'Vodafone Idea Foundation',
     date: '2026',
     category: 'Project',
-    description: 'Successfully engineered the Car Market Trends Analysis with Car Dekho Data repository as an independent project initiative.'
+    description: 'Successfully engineered the Car Market Trends Analysis with Car Dekho Data repository as an independent project initiative.',
+    metric: 'VOIS Project-4'
   },
   {
+    id: '3',
     title: 'Published Rakshak Connect Open-Source Safety App',
     organization: 'GitHub Open Source',
     date: '2026',
     category: 'Open Source',
-    description: 'Architected and released a complete Flutter citizen safety application with SOS SMS broadcast and GPS integration.'
+    description: 'Architected and released a complete Flutter citizen safety application with SOS SMS broadcast and GPS integration.',
+    metric: 'Open Source'
   }
 ];
