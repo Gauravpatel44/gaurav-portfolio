@@ -1,42 +1,8 @@
-export interface SkillItem {
-  name: string;
-  level: 'Hands-on' | 'Proficient' | 'Experimented' | 'Learning';
-  iconName?: string;
-}
-
-export interface Project {
-  id: string;
-  title: string;
-  category: 'Mobile App' | 'Web Application' | 'AI & Data' | 'Cybersecurity' | 'System';
-  type: string;
-  shortDescription: string;
-  fullDescription: string;
-  technologies: string[];
-  features: string[];
-  problem: string;
-  solution: string;
-  challenges: string[];
-  learnings: string[];
-  githubUrl: string;
-  liveUrl?: string;
-  isOpenSource: boolean;
-  featured: boolean;
-  image: string;
-  badge?: string;
-}
-
-export interface SkillCategory {
-  name: string;
-  description: string;
-  skills: SkillItem[];
-}
-
-export interface SemesterRecord {
+export interface SemesterInfo {
   semester: string;
   spi: number;
-  maxSpi: number;
-  highlight?: string;
-  status: 'Completed' | 'Current' | 'Upcoming';
+  status: 'Completed' | 'In Progress' | 'Upcoming';
+  highlight?: boolean;
 }
 
 export interface EducationItem {
@@ -45,29 +11,46 @@ export interface EducationItem {
   period: string;
   location: string;
   status: string;
+  semesters: SemesterInfo[];
+  highlights: string[];
+}
+
+export interface SkillItem {
+  name: string;
+  level: 'Proficient' | 'Hands-on' | 'Experimented' | 'Learning';
+}
+
+export interface SkillCategory {
+  name: string;
   description: string;
-  semesters: SemesterRecord[];
-  nextGoal: {
-    title: string;
-    college: string;
-    details: string;
-  };
+  skills: SkillItem[];
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  category: 'Mobile App' | 'AI & Data' | 'Cybersecurity' | 'Web Development';
+  badge?: string;
+  shortDescription: string;
+  fullDescription: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl?: string;
+  features: string[];
+  architecture?: string[];
 }
 
 export interface ExperienceItem {
   id: string;
   organization: string;
   role: string;
-  duration: string;
+  type: string;
   dateRange: string;
-  type: 'Internship' | 'Skill Training' | 'Program';
+  duration: string;
+  partner?: string;
   description: string;
   highlights: string[];
-  partner?: string;
-  mentor?: string;
-  badgeColor: string;
   certificateUrl?: string;
-  certificateImage?: string;
 }
 
 export interface CertificationItem {
@@ -75,41 +58,53 @@ export interface CertificationItem {
   title: string;
   certificateType: string;
   issuer: string;
-  partners: string;
-  date: string;
+  partners?: string;
+  recipientName: string;
   dateRange: string;
   credentialId?: string;
-  internshipId?: string;
   enrollmentNo?: string;
-  verificationUrl: string;
   imageUrl: string;
-  category: 'AI & ML' | 'Cybersecurity' | 'Data Science' | 'Cloud & Systems';
+  verificationUrl: string;
+  category: string;
   icon: string;
-  recipientName: string;
-  institution: string;
-  signatories: string[];
   summary: string;
 }
 
 export interface AchievementItem {
-  id: string;
   title: string;
-  category: 'Academic' | 'Development' | 'Open Source' | 'Training';
+  organization: string;
+  date: string;
+  category: string;
   description: string;
-  metric?: string;
+}
+
+export interface PersonalInfo {
+  name: string;
+  formalName: string;
+  title: string;
+  tagline: string;
+  institution: string;
+  program: string;
+  years: string;
+  location: string;
+  email: string;
+  phone: string;
+  githubUsername: string;
+  githubUrl: string;
+  linkedinUrl: string;
+  resumeDriveUrl: string;
+  latestSpi: number;
+  averageSpi: number;
 }
 
 export interface GitHubRepo {
   id: number;
   name: string;
-  full_name?: string;
-  description: string;
+  description: string | null;
   html_url: string;
   stargazers_count: number;
   forks_count: number;
   language: string | null;
-  topics: string[];
+  topics?: string[];
   updated_at: string;
-  homepage?: string | null;
-  fork?: boolean;
 }
