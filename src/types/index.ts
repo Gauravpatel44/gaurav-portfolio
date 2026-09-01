@@ -2,7 +2,7 @@ export type {
   Project,
   SkillItem,
   SkillCategory,
-  SemesterRecord,
+  SemesterInfo,
   EducationItem,
   ExperienceItem,
   CertificationItem,
