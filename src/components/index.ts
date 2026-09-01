@@ -1,0 +1,16 @@
+export { Navbar } from './Navbar';
+export { Hero } from './Hero';
+export { StatsBar } from './StatsBar';
+export { About } from './About';
+export { Education } from './Education';
+export { Skills } from './Skills';
+export { Projects } from './Projects';
+export { ProjectModal } from './ProjectModal';
+export { Experience } from './Experience';
+export { Certifications } from './Certifications';
+export { Achievements } from './Achievements';
+export { GitHubHub } from './GitHubHub';
+export { ResumeSection } from './ResumeSection';
+export { Contact } from './Contact';
+export { Footer } from './Footer';
+export { InteractiveBackground } from './InteractiveBackground';
