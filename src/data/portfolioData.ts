@@ -26,6 +26,10 @@ export const personalInfo = {
   }
 };
 
+const rawBaseUrl = (import.meta as { env?: { BASE_URL?: string } })?.env?.BASE_URL || '/';
+const baseUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl : `${rawBaseUrl}/`;
+
+
 export const educationData: EducationItem = {
   institution: "Government Polytechnic Valsad",
   degree: "Diploma in Information Technology",
