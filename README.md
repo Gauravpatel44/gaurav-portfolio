@@ -96,4 +96,3 @@ npm run build
 - **GitHub**: [github.com/Gauravpatel44](https://github.com/Gauravpatel44)
 - **LinkedIn**: [linkedin.com/in/gaurav-patel-7ab896375](https://www.linkedin.com/in/gaurav-patel-7ab896375)
 - **Email**: gauravpatel2060@gmail.com
-- **Phone**: +91 9510182060
