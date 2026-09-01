@@ -125,7 +125,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 <span>Challenges Overcome</span>
               </h3>
               <ul className="space-y-1.5 text-xs text-slate-400">
-                {project.challenges.map((c, i) => (
+                {project.challenges?.map((c, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="text-amber-400 font-bold">•</span>
                     <span>{c}</span>
@@ -140,7 +140,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 <span>What I Learned</span>
               </h3>
               <ul className="space-y-1.5 text-xs text-slate-400">
-                {project.learnings.map((l, i) => (
+                {project.learnings?.map((l, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="text-brand-400 font-bold">•</span>
                     <span>{l}</span>
