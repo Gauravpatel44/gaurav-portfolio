@@ -91,7 +91,7 @@ export const Education: React.FC = () => {
             {/* 2x2 Grid on Mobile for compact display */}
             <div className="grid grid-cols-2 lg:grid-cols-1 gap-2.5 sm:gap-3 flex-1">
               {educationData.semesters.map((sem, index) => {
-                const percentage = (sem.spi / sem.maxSpi) * 100;
+                const percentage = (sem.spi / 10) * 100;
                 const isLatest = sem.semester === "Semester 4";
 
                 return (
