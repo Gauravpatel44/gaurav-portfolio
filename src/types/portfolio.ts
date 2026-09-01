@@ -11,6 +11,7 @@ export interface EducationItem {
   period: string;
   location: string;
   status: string;
+  description?: string;
   semesters: SemesterInfo[];
   highlights: string[];
 }
@@ -71,30 +72,39 @@ export interface CertificationItem {
 }
 
 export interface AchievementItem {
+  id?: string;
   title: string;
   organization: string;
   date: string;
   category: string;
   description: string;
+  metric?: string;
 }
 
 export interface PersonalInfo {
   name: string;
-  formalName: string;
+  formalName?: string;
+  fullName?: string;
+  role?: string;
+  subtitle?: string;
   title: string;
   tagline: string;
+  shortIntro?: string;
+  aboutText?: string;
   institution: string;
   program: string;
   years: string;
   location: string;
   email: string;
   phone: string;
-  githubUsername: string;
   githubUrl: string;
+  githubUsername: string;
   linkedinUrl: string;
-  resumeDriveUrl: string;
-  latestSpi: number;
-  averageSpi: number;
+  resumeDriveUrl?: string;
+  resumeUrl?: string;
+  latestSpi?: number;
+  averageSpi?: number;
+  stats?: any;
 }
 
 export interface GitHubRepo {
