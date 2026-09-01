@@ -123,4 +123,5 @@ export interface GitHubRepo {
   language: string | null;
   topics?: string[];
   updated_at: string;
+  fork?: boolean;
 }
