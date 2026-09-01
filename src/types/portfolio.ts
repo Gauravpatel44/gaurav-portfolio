@@ -1,6 +1,7 @@
 export interface SemesterInfo {
   semester: string;
   spi: number;
+  maxSpi?: number | string;
   status: 'Completed' | 'In Progress' | 'Upcoming';
   highlight?: boolean;
 }
@@ -30,14 +31,19 @@ export interface SkillCategory {
 export interface Project {
   id: string;
   title: string;
-  category: 'Mobile App' | 'AI & Data' | 'Cybersecurity' | 'Web Development';
+  type?: string;
+  category: 'Mobile App' | 'AI & Data' | 'Cybersecurity' | 'Web Development' | string;
   badge?: string;
   shortDescription: string;
   fullDescription: string;
+  problem?: string;
+  solution?: string;
+  features: string[];
+  challenges?: string[];
+  learnings?: string[];
   technologies: string[];
   githubUrl: string;
   liveUrl?: string;
-  features: string[];
   architecture?: string[];
 }
 
