@@ -527,7 +527,95 @@ function initClipboardAndForm() {
 }
 
 // ==========================================================================
-// 9. Master Initialization
+// 9. Interactive 3D Cursor-Following Avatar Physics
+// ==========================================================================
+function init3DAvatar() {
+  const container = document.getElementById('heroAvatar3D');
+  const card = document.getElementById('avatar3DBody');
+  const photo = document.getElementById('avatar3DPhoto');
+  const glare = document.getElementById('avatar3DGlare');
+  if (!container || !card) return;
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let currentRotateX = 0;
+  let currentRotateY = 0;
+  let targetRotateX = 0;
+  let targetRotateY = 0;
+  let isHovered = false;
+
+  // Track cursor movement
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    const rect = container.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    const deltaX = (mouseX - centerX) / (window.innerWidth / 2);
+    const deltaY = (mouseY - centerY) / (window.innerHeight / 2);
+
+    targetRotateY = Math.max(-28, Math.min(28, deltaX * 28));
+    targetRotateX = Math.max(-28, Math.min(28, -deltaY * 28));
+  });
+
+  // Touch tracking for mobile
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches.length > 0) {
+      const touch = e.touches[0];
+      const rect = container.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const deltaX = (touch.clientX - centerX) / (window.innerWidth / 2);
+      const deltaY = (touch.clientY - centerY) / (window.innerHeight / 2);
+      targetRotateY = Math.max(-25, Math.min(25, deltaX * 25));
+      targetRotateX = Math.max(-25, Math.min(25, -deltaY * 25));
+    }
+  }, { passive: true });
+
+  container.addEventListener('mouseenter', () => { isHovered = true; });
+  container.addEventListener('mouseleave', () => { isHovered = false; });
+
+  // 60FPS spring physics loop
+  let idleTimer = 0;
+  function updatePhysics() {
+    idleTimer += 0.025;
+    const idleX = Math.sin(idleTimer) * 3.5;
+    const idleY = Math.cos(idleTimer * 0.8) * 3.5;
+
+    const finalTargetX = targetRotateX + (isHovered ? 0 : idleX);
+    const finalTargetY = targetRotateY + (isHovered ? 0 : idleY);
+
+    // Spring damping
+    currentRotateX += (finalTargetX - currentRotateX) * 0.09;
+    currentRotateY += (finalTargetY - currentRotateY) * 0.09;
+
+    // Apply 3D card rotation
+    card.style.transform = `rotateX(${currentRotateX.toFixed(2)}deg) rotateY(${currentRotateY.toFixed(2)}deg) translateZ(12px)`;
+
+    // Apply depth parallax to inner photo
+    if (photo) {
+      const photoShiftX = (currentRotateY * 0.45).toFixed(2);
+      const photoShiftY = (-currentRotateX * 0.45).toFixed(2);
+      photo.style.transform = `translate3d(${photoShiftX}px, ${photoShiftY}px, 20px) scale(1.1)`;
+    }
+
+    // Dynamic specular glass glare
+    if (glare) {
+      const glareX = 50 + currentRotateY * 1.6;
+      const glareY = 50 - currentRotateX * 1.6;
+      glare.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 65%)`;
+    }
+
+    requestAnimationFrame(updatePhysics);
+  }
+
+  requestAnimationFrame(updatePhysics);
+}
+
+// ==========================================================================
+// 10. Master Initialization
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -535,4 +623,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjects();
   loadGitHubRepositories();
   initClipboardAndForm();
+  init3DAvatar();
 });
+
