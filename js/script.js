@@ -341,7 +341,7 @@ function closeProjectModal() {
 }
 
 // ==========================================================================
-// 6. Certificate Dialog Modal
+// 6. Certificate & Resume Dialog Modals
 // ==========================================================================
 function openCertificateModal(certId) {
   const cert = certificationData.find((c) => c.id === certId);
@@ -379,11 +379,24 @@ function closeCertificateModal() {
   document.body.style.overflow = 'auto';
 }
 
+function openResumeModal() {
+  const modal = document.getElementById('resumeDialog');
+  modal?.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeResumeModal() {
+  const modal = document.getElementById('resumeDialog');
+  modal?.classList.remove('open');
+  document.body.style.overflow = 'auto';
+}
+
 // Global modal esc key handling
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeProjectModal();
     closeCertificateModal();
+    closeResumeModal();
   }
 });
 
