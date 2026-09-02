@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gauravpatel44.github.io/gaurav-portfolio/sitemap.xml

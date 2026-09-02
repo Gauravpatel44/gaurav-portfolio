@@ -1,18 +1,2001 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gaurav Patel | Software Developer & Diploma in IT</title>
-    <meta name="description" content="Portfolio of Gaurav Patel (Patel Gaurav Dinesh) - Diploma in Information Technology student at Government Polytechnic Valsad. Mobile app engineer, data analytics, and cybersecurity." />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  </head>
-  <body class="bg-[#020408] text-slate-100 antialiased selection:bg-cyan-500/20 selection:text-cyan-400">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaurav Patel | Software Developer & Diploma in IT</title>
+  <meta name="description" content="Portfolio of Gaurav Patel (Patel Gaurav Dinesh) - Diploma in Information Technology student at Government Polytechnic Valsad. Mobile app engineer, data analytics, and cybersecurity." />
+  <meta name="keywords" content="Gaurav Patel, Patel Gaurav Dinesh, GP Valsad, Government Polytechnic Valsad, Diploma IT, Flutter Developer, Python, Data Analytics, Cybersecurity, Rakshak Connect" />
+  <meta name="author" content="Gaurav Patel" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Standalone Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Dynamic Pop-Up Grid Canvas Background -->
+  <canvas id="interactiveCanvas"></canvas>
+
+  <div class="app-container">
+
+    <!-- Floating Glass Header Navbar -->
+    <header class="site-header">
+      <nav id="siteNav" class="site-nav">
+        <div class="nav-container">
+          
+          <!-- Brand Logo -->
+          <a href="#" class="nav-brand">
+            <div class="nav-brand-icon">
+              <div class="nav-brand-icon-inner">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--electric-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <span class="nav-brand-text">GAURAV<span class="text-electric-gradient">.DEV</span></span>
+              <span class="nav-brand-sub">IT · GP VALSAD</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <div class="nav-links-desktop">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+
+          <!-- Desktop Social & Resume Actions -->
+          <div class="nav-actions-desktop">
+            <a href="https://github.com/Gauravpatel44" target="_blank" rel="noopener noreferrer" class="btn-icon" style="padding:0.5rem;" title="GitHub Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+            </a>
+
+            <a href="https://www.linkedin.com/in/gaurav-patel-7ab896375" target="_blank" rel="noopener noreferrer" class="btn-icon" style="padding:0.5rem;" title="LinkedIn Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+
+            <a href="https://drive.google.com/file/d/18EFM66SFcyxiyGr9VfCf2oqgU9ObeeaP/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.375rem 0.875rem;font-size:0.75rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Resume</span>
+            </a>
+          </div>
+
+          <!-- Mobile Actions & Toggle -->
+          <div class="nav-actions-mobile">
+            <a href="https://drive.google.com/file/d/18EFM66SFcyxiyGr9VfCf2oqgU9ObeeaP/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.25rem 0.625rem;font-size:0.6875rem;">
+              <span>Resume</span>
+            </a>
+
+            <button id="mobileMenuToggle" class="btn-icon" style="padding:0.5rem;" aria-label="Toggle Navigation Menu">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenuDrawer" class="mobile-menu-drawer">
+          <a href="#about" class="mobile-nav-link"><span>About</span> <span>›</span></a>
+          <a href="#education" class="mobile-nav-link"><span>Education</span> <span>›</span></a>
+          <a href="#skills" class="mobile-nav-link"><span>Skills</span> <span>›</span></a>
+          <a href="#projects" class="mobile-nav-link"><span>Projects</span> <span>›</span></a>
+          <a href="#experience" class="mobile-nav-link"><span>Experience</span> <span>›</span></a>
+          <a href="#certifications" class="mobile-nav-link"><span>Certifications</span> <span>›</span></a>
+          <a href="#contact" class="mobile-nav-link"><span>Contact</span> <span>›</span></a>
+          
+          <div style="display:flex;align-items:center;justify-content:space-around;padding-top:0.625rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:0.375rem;font-family:var(--font-mono);font-size:0.75rem;">
+            <a href="https://github.com/Gauravpatel44" target="_blank" rel="noopener noreferrer" style="color:var(--text-secondary);text-decoration:none;display:flex;align-items:center;gap:0.375rem;">
+              <span style="color:var(--electric-cyan);">★</span> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/gaurav-patel-7ab896375" target="_blank" rel="noopener noreferrer" style="color:var(--text-secondary);text-decoration:none;display:flex;align-items:center;gap:0.375rem;">
+              <span style="color:var(--electric-emerald);">★</span> LinkedIn
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content Sections -->
+    <main>
+
+      <!-- HERO SECTION -->
+      <section id="hero" class="hero-section">
+        <div class="max-w-7xl">
+          
+          <!-- Top Badges -->
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem;margin-bottom:1rem;">
+            <div class="section-pill">
+              <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background-color:var(--electric-emerald);" class="animate-pulse"></span>
+              <span>AVAILABLE FOR TECHNICAL COLLABORATION & INTERNSHIPS</span>
+            </div>
+
+            <div style="display:inline-flex;align-items:center;gap:0.375rem;padding:0.25rem 0.75rem;border-radius:9999px;background-color:rgba(8,16,32,0.8);border:1px solid rgba(255,255,255,0.15);font-size:0.725rem;font-family:var(--font-mono);color:var(--text-secondary);backdrop-filter:blur(12px);">
+              <span style="color:var(--electric-amber);">🏆</span>
+              <span>Latest SPI: <strong style="color:#ffffff;">9.35</strong> (Sem 4)</span>
+            </div>
+          </div>
+
+          <!-- Hero Grid -->
+          <div class="hero-grid">
+            
+            <!-- Left Bio -->
+            <div>
+              <h1 class="hero-title">
+                Hi, I'm <span class="text-electric-gradient">Gaurav Patel</span>.
+              </h1>
+              <p class="hero-subtitle">
+                Diploma in Information Technology Student & Software Developer
+              </p>
+              <p class="hero-desc">
+                Crafting responsive mobile applications, data analytics suites, and intelligent software systems. Currently pursuing Diploma coursework at <strong>Government Polytechnic Valsad</strong> while engineering open-source projects in Flutter, Python, and applied data analytics.
+              </p>
+
+              <!-- CTA Buttons -->
+              <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;margin-top:1.5rem;">
+                <a href="#projects" class="btn-electric" style="padding:0.75rem 1.5rem;font-size:0.875rem;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path><circle cx="12" cy="13" r="2"></circle></svg>
+                  <span>Explore Projects</span>
+                  <span>↗</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/18EFM66SFcyxiyGr9VfCf2oqgU9ObeeaP/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-outline" style="padding:0.6875rem 1.25rem;font-size:0.875rem;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--electric-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                  <span>View Full Resume</span>
+                </a>
+
+                <button onclick="copyEmail()" class="btn-icon copy-email-btn" style="padding:0.6875rem;" title="Copy Email Address">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Terminal -->
+            <div>
+              <div class="bento-card terminal-card">
+                <div class="terminal-header">
+                  <div class="terminal-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-amber"></span>
+                    <span class="dot-green"></span>
+                    <span style="font-weight:bold;margin-left:0.375rem;">gaurav@gpvalsad:~</span>
+                  </div>
+                  <span style="color:var(--electric-cyan);">zsh</span>
+                </div>
+
+                <div class="terminal-line">
+                  <span style="color:var(--electric-emerald);">$</span> <span style="color:#ffffff;">whoami</span>
+                  <div class="terminal-output">Patel Gaurav Dinesh (Diploma IT Student)</div>
+                </div>
+
+                <div class="terminal-line">
+                  <span style="color:var(--electric-emerald);">$</span> <span style="color:#ffffff;">cat stack.json</span>
+                  <div class="terminal-output" style="color:var(--electric-cyan);">["Flutter", "Python", "SQL", "Pandas", "AI"]</div>
+                </div>
+
+                <div class="terminal-line">
+                  <span style="color:var(--electric-emerald);">$</span> <span style="color:#ffffff;">git status --active</span>
+                  <div class="terminal-output">
+                    <span style="color:var(--electric-emerald);">●</span> Rakshak Connect (SOS Safety App)<br/>
+                    <span style="color:var(--electric-emerald);">●</span> Car Market EDA (VOIS Project-4)
+                  </div>
+                </div>
+
+                <div style="margin-top:0.75rem;padding:0.5rem;border-radius:0.5rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;font-size:0.625rem;color:var(--text-muted);">
+                  <span>Location: <strong style="color:#ffffff;">Valsad, Gujarat</strong></span>
+                  <span style="color:var(--electric-emerald);font-weight:bold;">● Status: Active</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- STATS BAR -->
+      <section id="stats" class="section-wrapper" style="padding-top:1.5rem;padding-bottom:1.5rem;">
+        <div class="max-w-7xl">
+          <div class="stats-grid">
+            
+            <!-- Stat 1 -->
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(0,229,255,0.4);display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.5rem;">
+                <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-cyan);">🏆</span>
+                <span style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--text-muted);">Latest SPI (Sem 4)</span>
+              </div>
+              <div>
+                <div style="font-size:1.75rem;font-weight:900;font-family:var(--font-mono);color:#ffffff;">9.35</div>
+                <div style="font-size:0.75rem;font-family:var(--font-mono);color:var(--text-secondary);">Avg SPI: 9.07</div>
+              </div>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(0,240,170,0.4);display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.5rem;">
+                <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-emerald);">📁</span>
+                <span style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--text-muted);">Real GitHub Repos</span>
+              </div>
+              <div>
+                <div style="font-size:1.75rem;font-weight:900;font-family:var(--font-mono);color:#ffffff;">4+</div>
+                <div style="font-size:0.75rem;font-family:var(--font-mono);color:var(--text-secondary);">Flutter, Python, AI Anomaly</div>
+              </div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(168,85,247,0.4);display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.5rem;">
+                <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-purple);">📅</span>
+                <span style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--text-muted);">Diploma Journey</span>
+              </div>
+              <div>
+                <div style="font-size:1.75rem;font-weight:900;font-family:var(--font-mono);color:#ffffff;">2024 – 2027</div>
+                <div style="font-size:0.75rem;font-family:var(--font-mono);color:var(--text-secondary);">GP Valsad (IT Branch)</div>
+              </div>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(245,158,11,0.4);display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.5rem;">
+                <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-amber);">🛡️</span>
+                <span style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--text-muted);">Verified Certifications</span>
+              </div>
+              <div>
+                <div style="font-size:1.75rem;font-weight:900;font-family:var(--font-mono);color:#ffffff;">3 Verified</div>
+                <div style="font-size:0.75rem;font-family:var(--font-mono);color:var(--text-secondary);">Microsoft, VOIS, IBM</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="section-wrapper">
+        <div class="max-w-7xl">
+          
+          <div style="margin-bottom:1.5rem;">
+            <div class="section-pill">
+              <span>👤</span>
+              <span>BACKGROUND & IDENTITY</span>
+            </div>
+            <h2 class="section-title">
+              About <span class="text-electric-gradient">Gaurav Patel</span>
+            </h2>
+            <p class="section-subtitle">
+              A software developer with a practical problem-solving mindset, combining academic rigor with real hands-on development.
+            </p>
+          </div>
+
+          <!-- Bento Bio Layout -->
+          <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;" class="md:grid-cols-12">
+            
+            <!-- Left Main Bio (8 cols) -->
+            <div class="bento-card" style="padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;" class="lg:col-span-8">
+              <div style="display:flex;flex-direction:column;gap:1rem;">
+                <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-family:var(--font-mono);color:var(--electric-cyan);font-weight:bold;">
+                  <span>✨</span>
+                  <span>DIPLOMA IN IT · GOVERNMENT POLYTECHNIC VALSAD</span>
+                </div>
+
+                <p style="font-size:1rem;color:#f1f5f9;line-height:1.6;">
+                  An Information Technology student with hands-on focus in Flutter, Python, Data Analytics, and Cybersecurity.
+                </p>
+
+                <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">
+                  My technical focus spans mobile app engineering (Flutter/Dart), exploratory data analytics (Python, Pandas, Seaborn), network intrusion anomaly detection, and modern UI engineering.
+                </p>
+              </div>
+
+              <!-- Strip Badges -->
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.15);margin-top:1rem;font-family:var(--font-mono);font-size:0.75rem;">
+                <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);color:var(--text-secondary);">
+                  <span style="color:var(--electric-cyan);">📍</span>
+                  <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Valsad, Gujarat, India</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);color:var(--text-secondary);">
+                  <span style="color:var(--electric-emerald);">🎓</span>
+                  <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">GP Valsad (2024–27)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Philosophy (4 cols) -->
+            <div class="bento-card" style="padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;" class="lg:col-span-4">
+              <div>
+                <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-family:var(--font-mono);color:var(--electric-emerald);font-weight:bold;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">
+                  <span>💻</span>
+                  <span>Technical Philosophy</span>
+                </div>
+                <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.5rem;">
+                  Code that solves real problems.
+                </h3>
+                <p style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.6;">
+                  I believe in building real, usable software rather than hypothetical concepts. Every repository reflects hands-on implementation and structured documentation.
+                </p>
+              </div>
+
+              <div style="padding:0.75rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);font-family:var(--font-mono);font-size:0.6875rem;color:var(--electric-cyan);display:flex;flex-direction:column;gap:0.25rem;margin-top:1rem;">
+                <div>⚡ 100% Practical Implementation</div>
+                <div>🛡️ Clean Defensive Architecture</div>
+                <div>📱 Responsive Mobile-First Design</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EDUCATION SECTION -->
+      <section id="education" class="section-wrapper">
+        <div class="max-w-7xl">
+          
+          <div style="margin-bottom:1.5rem;">
+            <div class="section-pill">
+              <span>🎓</span>
+              <span>ACADEMIC FOUNDATION & TRACK RECORD</span>
+            </div>
+            <h2 class="section-title">
+              Formal Education & <span class="text-electric-gradient">Academic Journey</span>
+            </h2>
+            <p class="section-subtitle">
+              Pursuing Diploma in Information Technology at Government Polytechnic Valsad (2024–2027) with high academic distinction.
+            </p>
+          </div>
+
+          <!-- Bento Grid -->
+          <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;" class="md:grid-cols-12">
+            
+            <!-- Main Education Bento Card (8 cols) -->
+            <div class="bento-card" style="padding:1.5rem;display:flex;flex-direction:column;gap:1.25rem;" class="lg:col-span-8">
+              
+              <!-- Institution Header -->
+              <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:0.75rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,0.15);">
+                <div>
+                  <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.375rem;">
+                    <span style="font-size:0.75rem;font-family:var(--font-mono);font-weight:900;color:var(--electric-cyan);background:rgba(8,51,68,0.9);padding:0.125rem 0.625rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">
+                      Technical Diploma
+                    </span>
+                    <span style="font-size:0.75rem;font-family:var(--font-mono);font-weight:700;color:var(--electric-emerald);background:rgba(6,78,59,0.8);padding:0.125rem 0.625rem;border-radius:0.375rem;border:1px solid var(--border-emerald);">
+                      Currently Pursuing (Semester 4 Completed)
+                    </span>
+                  </div>
+                  <h3 style="font-size:1.35rem;font-weight:900;color:#ffffff;">
+                    Diploma in Information Technology
+                  </h3>
+                  <div style="font-size:0.875rem;font-weight:700;color:var(--text-secondary);margin-top:0.25rem;">
+                    Government Polytechnic Valsad
+                  </div>
+                </div>
+
+                <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);">
+                  <div style="display:flex;align-items:center;gap:0.375rem;font-weight:bold;color:#ffffff;">
+                    <span style="color:var(--electric-cyan);">📅</span> 2024 – 2027
+                  </div>
+                  <div style="display:flex;align-items:center;gap:0.375rem;color:var(--text-muted);margin-top:0.25rem;">
+                    <span style="color:var(--electric-emerald);">📍</span> Valsad, Gujarat, India
+                  </div>
+                </div>
+              </div>
+
+              <!-- Coursework Highlights -->
+              <div>
+                <div style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">
+                  Academic Focus & Applied Competencies:
+                </div>
+                <div style="display:grid;grid-template-columns:1fr;gap:0.5rem;" class="sm:grid-cols-2">
+                  <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.1);font-size:0.75rem;color:var(--text-secondary);">
+                    <span style="color:var(--electric-emerald);">✔</span>
+                    <span>Top academic percentile with consistent 9.0+ SPI throughout curriculum</span>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.1);font-size:0.75rem;color:var(--text-secondary);">
+                    <span style="color:var(--electric-emerald);">✔</span>
+                    <span>Specialized in Object-Oriented Programming, Database Management, and Network Security</span>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.1);font-size:0.75rem;color:var(--text-secondary);">
+                    <span style="color:var(--electric-emerald);">✔</span>
+                    <span>Actively applied classroom theoretical concepts to production open-source applications</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Semester Progression Bento (4 cols) -->
+            <div class="bento-card" style="padding:1.25rem;border:2px solid var(--border-cyan);display:flex;flex-direction:column;justify-content:space-between;gap:0.75rem;" class="lg:col-span-4">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:0.625rem;border-bottom:1px solid rgba(255,255,255,0.15);">
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--electric-amber);">🏆</span>
+                  <span style="font-size:0.8125rem;font-weight:900;color:#ffffff;font-family:var(--font-mono);">Semester Progression</span>
+                </div>
+                <span style="font-size:0.6875rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-emerald);background:rgba(6,78,59,0.8);padding:0.125rem 0.5rem;border-radius:0.25rem;border:1px solid var(--border-emerald);">
+                  9.07 Avg SPI
+                </span>
+              </div>
+
+              <!-- 2x2 Grid on Mobile, 1-col on Desktop -->
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;" class="lg:grid-cols-1">
+                
+                <!-- Sem 1 -->
+                <div style="padding:0.625rem 0.75rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.6875rem;font-family:var(--font-mono);color:var(--text-muted);margin-bottom:0.25rem;">
+                    <span style="color:var(--text-secondary);font-weight:bold;">Semester 1</span>
+                  </div>
+                  <div style="display:flex;align-items:baseline;justify-content:space-between;">
+                    <span style="font-size:1.125rem;font-weight:900;font-family:var(--font-mono);color:#ffffff;">8.95</span>
+                    <span style="font-size:0.625rem;font-family:var(--font-mono);color:var(--text-dark-muted);">/ 10.00</span>
+                  </div>
+                  <div style="margin-top:0.375rem;height:6px;width:100%;background:rgba(4,8,18,0.9);border-radius:9999px;overflow:hidden;border:1px solid rgba(255,255,255,0.05);">
+                    <div style="height:100%;width:89.5%;background:#64748b;border-radius:9999px;"></div>
+                  </div>
+                </div>
+
+                <!-- Sem 2 -->
+                <div style="padding:0.625rem 0.75rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.6875rem;font-family:var(--font-mono);color:var(--text-muted);margin-bottom:0.25rem;">
+                    <span style="color:var(--text-secondary);font-weight:bold;">Semester 2</span>
+                  </div>
+                  <div style="display:flex;align-items:baseline;justify-content:space-between;">
+                    <span style="font-size:1.125rem;font-weight:900;font-family:var(--font-mono);color:#ffffff;">9.00</span>
+                    <span style="font-size:0.625rem;font-family:var(--font-mono);color:var(--text-dark-muted);">/ 10.00</span>
+                  </div>
+                  <div style="margin-top:0.375rem;height:6px;width:100%;background:rgba(4,8,18,0.9);border-radius:9999px;overflow:hidden;border:1px solid rgba(255,255,255,0.05);">
+                    <div style="height:100%;width:90.0%;background:#64748b;border-radius:9999px;"></div>
+                  </div>
+                </div>
+
+                <!-- Sem 3 -->
+                <div style="padding:0.625rem 0.75rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.6875rem;font-family:var(--font-mono);color:var(--text-muted);margin-bottom:0.25rem;">
+                    <span style="color:var(--text-secondary);font-weight:bold;">Semester 3</span>
+                  </div>
+                  <div style="display:flex;align-items:baseline;justify-content:space-between;">
+                    <span style="font-size:1.125rem;font-weight:900;font-family:var(--font-mono);color:#ffffff;">9.00</span>
+                    <span style="font-size:0.625rem;font-family:var(--font-mono);color:var(--text-dark-muted);">/ 10.00</span>
+                  </div>
+                  <div style="margin-top:0.375rem;height:6px;width:100%;background:rgba(4,8,18,0.9);border-radius:9999px;overflow:hidden;border:1px solid rgba(255,255,255,0.05);">
+                    <div style="height:100%;width:90.0%;background:#64748b;border-radius:9999px;"></div>
+                  </div>
+                </div>
+
+                <!-- Sem 4 (Peak) -->
+                <div style="padding:0.625rem 0.75rem;border-radius:0.75rem;background:rgba(8,51,68,0.6);border:1.5px solid rgba(0,229,255,0.6);box-shadow:var(--glow-cyan);">
+                  <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.6875rem;font-family:var(--font-mono);color:var(--text-muted);margin-bottom:0.25rem;">
+                    <span style="color:var(--text-secondary);font-weight:bold;">Semester 4</span>
+                    <span style="font-size:0.5625rem;font-weight:bold;color:var(--electric-cyan);padding:0.1rem 0.35rem;border-radius:0.25rem;background:rgba(8,51,68,0.9);border:1px solid rgba(0,229,255,0.4);">
+                      ★ Peak
+                    </span>
+                  </div>
+                  <div style="display:flex;align-items:baseline;justify-content:space-between;">
+                    <span style="font-size:1.125rem;font-weight:900;font-family:var(--font-mono);color:#ffffff;">9.35</span>
+                    <span style="font-size:0.625rem;font-family:var(--font-mono);color:var(--text-dark-muted);">/ 10.00</span>
+                  </div>
+                  <div style="margin-top:0.375rem;height:6px;width:100%;background:rgba(4,8,18,0.9);border-radius:9999px;overflow:hidden;border:1px solid rgba(255,255,255,0.05);">
+                    <div style="height:100%;width:93.5%;background:linear-gradient(90deg, var(--electric-cyan), var(--electric-emerald));border-radius:9999px;"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div style="padding-top:0.5rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;font-size:0.6875rem;font-family:var(--font-mono);color:var(--text-muted);">
+                <span>Standing:</span>
+                <span style="font-weight:900;color:var(--electric-emerald);">First Class with Distinction</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section id="skills" class="section-wrapper">
+        <div class="max-w-7xl">
+          
+          <div style="margin-bottom:1.5rem;">
+            <div class="section-pill">
+              <span>⚡</span>
+              <span>CORE TECHNICAL CAPABILITIES</span>
+            </div>
+            <h2 class="section-title">
+              Technical Stack & <span class="text-electric-gradient">Domain Competencies</span>
+            </h2>
+            <p class="section-subtitle">
+              Hands-on toolchain, programming languages, and specialized domains applied across real software projects.
+            </p>
+          </div>
+
+          <!-- Mobile Carousel (< md screens) -->
+          <div class="carousel-mobile-wrapper">
+            <div class="carousel-swipe-bar">
+              <span style="color:var(--electric-cyan);font-weight:bold;">
+                👆 Swipe cards <span id="skillsSwipeCount">(1 of 6)</span>
+              </span>
+              <div style="display:flex;align-items:center;gap:0.375rem;">
+                <button id="skillsPrevBtn" class="btn-icon" style="padding:0.25rem 0.5rem;" aria-label="Previous skill">‹</button>
+                <button id="skillsNextBtn" class="btn-icon" style="padding:0.25rem 0.5rem;" aria-label="Next skill">›</button>
+              </div>
+            </div>
+
+            <div id="skillsMobileSlider" class="carousel-slider scrollbar-none">
+              
+              <!-- Programming Languages -->
+              <div class="carousel-card bento-card" style="padding:1rem;border:2px solid rgba(255,255,255,0.15);">
+                <div>
+                  <div style="display:flex;align-items:center;gap:0.625rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.75rem;">
+                    <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-cyan);">💻</span>
+                    <div>
+                      <h3 style="font-size:1rem;font-weight:900;color:#ffffff;">Programming Languages</h3>
+                      <p style="font-size:0.6875rem;color:var(--text-muted);">Core languages used for building software</p>
+                    </div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:0.375rem;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">Python</span>
+                      <span class="badge-level badge-hands-on">Hands-on</span>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">Dart</span>
+                      <span class="badge-level badge-hands-on">Hands-on</span>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">Java</span>
+                      <span class="badge-level badge-hands-on">Hands-on</span>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">SQL</span>
+                      <span class="badge-level badge-hands-on">Hands-on</span>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">HTML5 / CSS3</span>
+                      <span class="badge-level badge-proficient">Proficient</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:0.75rem;display:flex;align-items:center;justify-content:space-between;font-size:0.6875rem;font-family:var(--font-mono);color:var(--text-muted);">
+                  <span>Count:</span>
+                  <span style="color:var(--electric-cyan);font-weight:900;">7 Competencies</span>
+                </div>
+              </div>
+
+              <!-- Frameworks & Tech -->
+              <div class="carousel-card bento-card" style="padding:1rem;border:2px solid rgba(255,255,255,0.15);">
+                <div>
+                  <div style="display:flex;align-items:center;gap:0.625rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.75rem;">
+                    <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-emerald);">📱</span>
+                    <div>
+                      <h3 style="font-size:1rem;font-weight:900;color:#ffffff;">Frameworks & Tech</h3>
+                      <p style="font-size:0.6875rem;color:var(--text-muted);">Modern app and backend frameworks</p>
+                    </div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:0.375rem;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">Flutter</span>
+                      <span class="badge-level badge-hands-on">Hands-on</span>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">Django</span>
+                      <span class="badge-level badge-applied">Learning</span>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">REST APIs</span>
+                      <span class="badge-level badge-hands-on">Hands-on</span>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">Tailwind & CSS3</span>
+                      <span class="badge-level badge-hands-on">Hands-on</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:0.75rem;display:flex;align-items:center;justify-content:space-between;font-size:0.6875rem;font-family:var(--font-mono);color:var(--text-muted);">
+                  <span>Count:</span>
+                  <span style="color:var(--electric-cyan);font-weight:900;">5 Competencies</span>
+                </div>
+              </div>
+
+              <!-- Data Science & Python -->
+              <div class="carousel-card bento-card" style="padding:1rem;border:2px solid rgba(255,255,255,0.15);">
+                <div>
+                  <div style="display:flex;align-items:center;gap:0.625rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.75rem;">
+                    <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-amber);">🔥</span>
+                    <div>
+                      <h3 style="font-size:1rem;font-weight:900;color:#ffffff;">Data Science & Python</h3>
+                      <p style="font-size:0.6875rem;color:var(--text-muted);">Scientific Python libraries for EDA</p>
+                    </div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:0.375rem;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">Pandas</span>
+                      <span class="badge-level badge-hands-on">Hands-on</span>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">NumPy</span>
+                      <span class="badge-level badge-hands-on">Hands-on</span>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">Matplotlib & Seaborn</span>
+                      <span class="badge-level badge-hands-on">Hands-on</span>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                      <span style="font-weight:bold;color:#ffffff;">Scikit-Learn</span>
+                      <span class="badge-level badge-applied">Applied</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:0.75rem;display:flex;align-items:center;justify-content:space-between;font-size:0.6875rem;font-family:var(--font-mono);color:var(--text-muted);">
+                  <span>Count:</span>
+                  <span style="color:var(--electric-cyan);font-weight:900;">5 Competencies</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Dots -->
+            <div id="skillsDots" class="carousel-dots"></div>
+          </div>
+
+          <!-- Desktop Bento Grid (>= md screens) -->
+          <div class="desktop-grid-wrapper md:grid-cols-2 lg:grid-cols-3" style="gap:1.25rem;">
+            
+            <!-- Category 1 -->
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;gap:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.875rem;">
+                  <span style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-cyan);">💻</span>
+                  <div>
+                    <h3 style="font-size:1rem;font-weight:900;color:#ffffff;">Programming Languages</h3>
+                    <p style="font-size:0.75rem;color:var(--text-muted);">Core languages used for building software</p>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Python</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Dart</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Java</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">SQL & PHP</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">HTML5 / CSS3</span>
+                    <span class="badge-level badge-proficient">Proficient</span>
+                  </div>
+                </div>
+              </div>
+              <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:0.875rem;display:flex;align-items:center;justify-content:space-between;font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);">
+                <span>Domain Total:</span>
+                <span style="color:var(--electric-cyan);font-weight:900;">7 Competencies</span>
+              </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;gap:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.875rem;">
+                  <span style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-emerald);">📱</span>
+                  <div>
+                    <h3 style="font-size:1rem;font-weight:900;color:#ffffff;">Frameworks & Tech</h3>
+                    <p style="font-size:0.75rem;color:var(--text-muted);">Modern app and backend frameworks</p>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Flutter</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Django</span>
+                    <span class="badge-level badge-applied">Learning</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">REST APIs</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Tailwind & CSS3</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                </div>
+              </div>
+              <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:0.875rem;display:flex;align-items:center;justify-content:space-between;font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);">
+                <span>Domain Total:</span>
+                <span style="color:var(--electric-cyan);font-weight:900;">5 Competencies</span>
+              </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;gap:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.875rem;">
+                  <span style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-amber);">🔥</span>
+                  <div>
+                    <h3 style="font-size:1rem;font-weight:900;color:#ffffff;">Data Science & Python</h3>
+                    <p style="font-size:0.75rem;color:var(--text-muted);">Scientific Python libraries for EDA</p>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Pandas</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">NumPy</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Matplotlib & Seaborn</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Scikit-Learn</span>
+                    <span class="badge-level badge-applied">Applied</span>
+                  </div>
+                </div>
+              </div>
+              <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:0.875rem;display:flex;align-items:center;justify-content:space-between;font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);">
+                <span>Domain Total:</span>
+                <span style="color:var(--electric-cyan);font-weight:900;">5 Competencies</span>
+              </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;gap:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.875rem;">
+                  <span style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-purple);">🗄️</span>
+                  <div>
+                    <h3 style="font-size:1rem;font-weight:900;color:#ffffff;">Databases</h3>
+                    <p style="font-size:0.75rem;color:var(--text-muted);">Relational & document storage systems</p>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">MySQL</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">PostgreSQL</span>
+                    <span class="badge-level badge-applied">Applied</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Firebase Firestore</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                </div>
+              </div>
+              <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:0.875rem;display:flex;align-items:center;justify-content:space-between;font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);">
+                <span>Domain Total:</span>
+                <span style="color:var(--electric-cyan);font-weight:900;">3 Competencies</span>
+              </div>
+            </div>
+
+            <!-- Category 5 -->
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;gap:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.875rem;">
+                  <span style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-sky);">🛠️</span>
+                  <div>
+                    <h3 style="font-size:1rem;font-weight:900;color:#ffffff;">Development Tools</h3>
+                    <p style="font-size:0.75rem;color:var(--text-muted);">Version control, toolchains & IDEs</p>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Git & GitHub</span>
+                    <span class="badge-level badge-proficient">Proficient</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">VS Code & Studio</span>
+                    <span class="badge-level badge-proficient">Proficient</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Postman & APIs</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                </div>
+              </div>
+              <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:0.875rem;display:flex;align-items:center;justify-content:space-between;font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);">
+                <span>Domain Total:</span>
+                <span style="color:var(--electric-cyan);font-weight:900;">5 Competencies</span>
+              </div>
+            </div>
+
+            <!-- Category 6 -->
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;gap:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.875rem;">
+                  <span style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-rose);">💡</span>
+                  <div>
+                    <h3 style="font-size:1rem;font-weight:900;color:#ffffff;">Areas of Interest</h3>
+                    <p style="font-size:0.75rem;color:var(--text-muted);">Specializations & future focus</p>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Mobile App Engineering</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Cybersecurity & Defenses</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);font-family:var(--font-mono);font-size:0.75rem;">
+                    <span style="font-weight:bold;color:#ffffff;">Applied AI & ML Modeling</span>
+                    <span class="badge-level badge-hands-on">Hands-on</span>
+                  </div>
+                </div>
+              </div>
+              <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:0.875rem;display:flex;align-items:center;justify-content:space-between;font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);">
+                <span>Domain Total:</span>
+                <span style="color:var(--electric-cyan);font-weight:900;">4 Competencies</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="section-wrapper">
+        <div class="max-w-7xl">
+          
+          <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem;" class="md:flex-row md:items-end md:justify-between">
+            <div>
+              <div class="section-pill">
+                <span>📁</span>
+                <span>HANDS-ON SOFTWARE REPOSITORIES</span>
+              </div>
+              <h2 class="section-title">
+                Featured <span class="text-electric-gradient">Technical Projects</span>
+              </h2>
+              <p class="section-subtitle">
+                Real open-source systems built in Flutter, Python data science pipelines, and cybersecurity classification engines.
+              </p>
+            </div>
+
+            <!-- Filter Pills -->
+            <div id="projectFilters" class="filter-container">
+              <button class="filter-btn active" data-filter="All">All</button>
+              <button class="filter-btn" data-filter="Mobile App">Mobile App</button>
+              <button class="filter-btn" data-filter="AI & Data">AI & Data</button>
+              <button class="filter-btn" data-filter="Cybersecurity">Cybersecurity</button>
+            </div>
+          </div>
+
+          <!-- Mobile Carousel (< md screens) -->
+          <div class="carousel-mobile-wrapper">
+            <div class="carousel-swipe-bar">
+              <span style="color:var(--electric-cyan);font-weight:bold;">
+                👆 Swipe projects <span id="projectsSwipeCount">(1 of 4)</span>
+              </span>
+              <div style="display:flex;align-items:center;gap:0.375rem;">
+                <button id="projectsPrevBtn" class="btn-icon" style="padding:0.25rem 0.5rem;" aria-label="Previous project">‹</button>
+                <button id="projectsNextBtn" class="btn-icon" style="padding:0.25rem 0.5rem;" aria-label="Next project">›</button>
+              </div>
+            </div>
+
+            <div id="projectsMobileSlider" class="carousel-slider scrollbar-none">
+              
+              <!-- Project 1 -->
+              <div class="carousel-card bento-card project-card" data-category="Mobile App" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
+                    <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-cyan);">📱</span>
+                    <span style="font-size:0.625rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);background:rgba(8,51,68,0.8);padding:0.125rem 0.5rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">Open Source Spotlight</span>
+                  </div>
+                  <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.375rem;">Rakshak Connect</h3>
+                  <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;margin-bottom:0.75rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">
+                    Smart Emergency Response, Citizen Safety & Assistance System in Flutter designed for rapid emergency SOS dispatch.
+                  </p>
+                  <div style="display:flex;flex-wrap:gap;gap:0.25rem;margin-bottom:0.75rem;">
+                    <span class="tech-chip">Flutter</span>
+                    <span class="tech-chip">Dart</span>
+                    <span class="tech-chip">Android SDK</span>
+                  </div>
+                </div>
+                <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                  <button onclick="openProjectModal('rakshak-connect')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.75rem;cursor:pointer;">
+                    👁️ Details
+                  </button>
+                  <a href="https://github.com/Gauravpatel44/rakshak-connect" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.375rem 0.75rem;font-size:0.6875rem;">
+                    <span>GitHub</span> <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="carousel-card bento-card project-card" data-category="AI & Data" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
+                    <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-emerald);">📊</span>
+                    <span style="font-size:0.625rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);background:rgba(8,51,68,0.8);padding:0.125rem 0.5rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">VOIS Project-4</span>
+                  </div>
+                  <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.375rem;">Car Market Trends Analysis</h3>
+                  <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;margin-bottom:0.75rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">
+                    Comprehensive exploratory data analysis on automobile market trends using Car Dekho datasets with Python, Pandas, and Seaborn.
+                  </p>
+                  <div style="display:flex;flex-wrap:gap;gap:0.25rem;margin-bottom:0.75rem;">
+                    <span class="tech-chip">Python</span>
+                    <span class="tech-chip">Pandas</span>
+                    <span class="tech-chip">Seaborn</span>
+                  </div>
+                </div>
+                <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                  <button onclick="openProjectModal('car-market-trends')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.75rem;cursor:pointer;">
+                    👁️ Details
+                  </button>
+                  <a href="https://github.com/Gauravpatel44/Car-Market-Trends-Analysis-with-Car-Dekho-Data" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.375rem 0.75rem;font-size:0.6875rem;">
+                    <span>GitHub</span> <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="carousel-card bento-card project-card" data-category="Cybersecurity" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
+                    <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-purple);">🛡️</span>
+                    <span style="font-size:0.625rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);background:rgba(8,51,68,0.8);padding:0.125rem 0.5rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">Security Research</span>
+                  </div>
+                  <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.375rem;">AI Network Intrusion Detection</h3>
+                  <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;margin-bottom:0.75rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">
+                    Machine learning based network anomaly and malicious traffic classification system for proactive cyber defense.
+                  </p>
+                  <div style="display:flex;flex-wrap:gap;gap:0.25rem;margin-bottom:0.75rem;">
+                    <span class="tech-chip">Python</span>
+                    <span class="tech-chip">Scikit-Learn</span>
+                    <span class="tech-chip">ML</span>
+                  </div>
+                </div>
+                <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                  <button onclick="openProjectModal('network-intrusion-detection')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.75rem;cursor:pointer;">
+                    👁️ Details
+                  </button>
+                  <a href="https://github.com/Gauravpatel44/AI-Based-Network-Intrusion-Detection-System-" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.375rem 0.75rem;font-size:0.6875rem;">
+                    <span>GitHub</span> <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Project 4 -->
+              <div class="carousel-card bento-card project-card" data-category="Cybersecurity" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
+                    <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-rose);">🛡️</span>
+                    <span style="font-size:0.625rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);background:rgba(8,51,68,0.8);padding:0.125rem 0.5rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">Academic Research</span>
+                  </div>
+                  <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.375rem;">Python Keylogger Security Audit</h3>
+                  <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;margin-bottom:0.75rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">
+                    Educational security audit tool demonstrating keystroke logging mechanics and defensive mitigation counter-strategies.
+                  </p>
+                  <div style="display:flex;flex-wrap:gap;gap:0.25rem;margin-bottom:0.75rem;">
+                    <span class="tech-chip">Python</span>
+                    <span class="tech-chip">OS Hooks</span>
+                    <span class="tech-chip">Security</span>
+                  </div>
+                </div>
+                <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                  <button onclick="openProjectModal('python-keylogger-audit')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.75rem;cursor:pointer;">
+                    👁️ Details
+                  </button>
+                  <a href="https://github.com/Gauravpatel44/Python-Keylogger" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.375rem 0.75rem;font-size:0.6875rem;">
+                    <span>GitHub</span> <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Dots -->
+            <div id="projectsDots" class="carousel-dots"></div>
+          </div>
+
+          <!-- Desktop Bento Grid (>= md screens) -->
+          <div id="projectsDesktopGrid" class="desktop-grid-wrapper md:grid-cols-2" style="gap:1.5rem;">
+            
+            <!-- Project 1 -->
+            <div class="bento-card project-card" data-category="Mobile App" style="padding:1.5rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.875rem;">
+                  <span style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-cyan);">📱</span>
+                  <span style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);background:rgba(8,51,68,0.8);padding:0.125rem 0.625rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">Open Source Spotlight</span>
+                </div>
+                <h3 style="font-size:1.25rem;font-weight:900;color:#ffffff;margin-bottom:0.5rem;">Rakshak Connect</h3>
+                <p style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;">
+                  Smart Emergency Response, Citizen Safety & Assistance System in Flutter designed for rapid emergency SOS dispatch and safety alarms.
+                </p>
+                <div style="display:flex;flex-direction:column;gap:0.375rem;margin-bottom:1rem;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);">
+                  <div style="display:flex;align-items:center;gap:0.375rem;"><span style="color:var(--electric-emerald);">✔</span> Instant One-Tap SOS with automated live GPS broadcasting</div>
+                  <div style="display:flex;align-items:center;gap:0.375rem;"><span style="color:var(--electric-emerald);">✔</span> High-decibel hardware emergency siren override</div>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.375rem;margin-bottom:1rem;">
+                  <span class="tech-chip">Flutter</span>
+                  <span class="tech-chip">Dart</span>
+                  <span class="tech-chip">Android SDK</span>
+                  <span class="tech-chip">SMS Gateway</span>
+                  <span class="tech-chip">Geolocation</span>
+                </div>
+              </div>
+              <div style="padding-top:1rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                <button onclick="openProjectModal('rakshak-connect')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.8125rem;cursor:pointer;display:flex;align-items:center;gap:0.375rem;">
+                  <span>👁️</span> <span>Architecture & Details</span>
+                </button>
+                <a href="https://github.com/Gauravpatel44/rakshak-connect" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.5rem 1rem;font-size:0.75rem;">
+                  <span>View Repository</span> <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bento-card project-card" data-category="AI & Data" style="padding:1.5rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.875rem;">
+                  <span style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-emerald);">📊</span>
+                  <span style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);background:rgba(8,51,68,0.8);padding:0.125rem 0.625rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">VOIS Project-4</span>
+                </div>
+                <h3 style="font-size:1.25rem;font-weight:900;color:#ffffff;margin-bottom:0.5rem;">Car Market Trends Analysis</h3>
+                <p style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;">
+                  Comprehensive exploratory data analysis on automobile market trends using Car Dekho datasets with Python, Pandas, and Seaborn.
+                </p>
+                <div style="display:flex;flex-direction:column;gap:0.375rem;margin-bottom:1rem;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);">
+                  <div style="display:flex;align-items:center;gap:0.375rem;"><span style="color:var(--electric-emerald);">✔</span> Dataset cleaning, imputation, and categorical encoding</div>
+                  <div style="display:flex;align-items:center;gap:0.375rem;"><span style="color:var(--electric-emerald);">✔</span> Statistical multi-variable depreciation modeling</div>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.375rem;margin-bottom:1rem;">
+                  <span class="tech-chip">Python</span>
+                  <span class="tech-chip">Pandas</span>
+                  <span class="tech-chip">NumPy</span>
+                  <span class="tech-chip">Matplotlib</span>
+                  <span class="tech-chip">Seaborn</span>
+                </div>
+              </div>
+              <div style="padding-top:1rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                <button onclick="openProjectModal('car-market-trends')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.8125rem;cursor:pointer;display:flex;align-items:center;gap:0.375rem;">
+                  <span>👁️</span> <span>Architecture & Details</span>
+                </button>
+                <a href="https://github.com/Gauravpatel44/Car-Market-Trends-Analysis-with-Car-Dekho-Data" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.5rem 1rem;font-size:0.75rem;">
+                  <span>View Repository</span> <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bento-card project-card" data-category="Cybersecurity" style="padding:1.5rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.875rem;">
+                  <span style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-purple);">🛡️</span>
+                  <span style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);background:rgba(8,51,68,0.8);padding:0.125rem 0.625rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">Security Research</span>
+                </div>
+                <h3 style="font-size:1.25rem;font-weight:900;color:#ffffff;margin-bottom:0.5rem;">AI Network Intrusion Detection</h3>
+                <p style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;">
+                  Machine learning based network anomaly and malicious traffic classification system for proactive cyber defense.
+                </p>
+                <div style="display:flex;flex-direction:column;gap:0.375rem;margin-bottom:1rem;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);">
+                  <div style="display:flex;align-items:center;gap:0.375rem;"><span style="color:var(--electric-emerald);">✔</span> Packet feature vectorization and network anomaly detection</div>
+                  <div style="display:flex;align-items:center;gap:0.375rem;"><span style="color:var(--electric-emerald);">✔</span> Classification precision and false-positive minimization</div>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.375rem;margin-bottom:1rem;">
+                  <span class="tech-chip">Python</span>
+                  <span class="tech-chip">Scikit-Learn</span>
+                  <span class="tech-chip">Network Security</span>
+                  <span class="tech-chip">Pandas</span>
+                </div>
+              </div>
+              <div style="padding-top:1rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                <button onclick="openProjectModal('network-intrusion-detection')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.8125rem;cursor:pointer;display:flex;align-items:center;gap:0.375rem;">
+                  <span>👁️</span> <span>Architecture & Details</span>
+                </button>
+                <a href="https://github.com/Gauravpatel44/AI-Based-Network-Intrusion-Detection-System-" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.5rem 1rem;font-size:0.75rem;">
+                  <span>View Repository</span> <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="bento-card project-card" data-category="Cybersecurity" style="padding:1.5rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.875rem;">
+                  <span style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-rose);">🛡️</span>
+                  <span style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);background:rgba(8,51,68,0.8);padding:0.125rem 0.625rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">Academic Research</span>
+                </div>
+                <h3 style="font-size:1.25rem;font-weight:900;color:#ffffff;margin-bottom:0.5rem;">Python Keylogger Security Audit</h3>
+                <p style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;">
+                  Educational security audit tool demonstrating keystroke logging mechanics and defensive mitigation counter-strategies.
+                </p>
+                <div style="display:flex;flex-direction:column;gap:0.375rem;margin-bottom:1rem;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);">
+                  <div style="display:flex;align-items:center;gap:0.375rem;"><span style="color:var(--electric-emerald);">✔</span> Low-level input listener hook demonstration in Python</div>
+                  <div style="display:flex;align-items:center;gap:0.375rem;"><span style="color:var(--electric-emerald);">✔</span> Educational documentation on defensive hardening</div>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.375rem;margin-bottom:1rem;">
+                  <span class="tech-chip">Python</span>
+                  <span class="tech-chip">OS System Hooks</span>
+                  <span class="tech-chip">Cybersecurity</span>
+                  <span class="tech-chip">Defensive Hardening</span>
+                </div>
+              </div>
+              <div style="padding-top:1rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                <button onclick="openProjectModal('python-keylogger-audit')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.8125rem;cursor:pointer;display:flex;align-items:center;gap:0.375rem;">
+                  <span>👁️</span> <span>Architecture & Details</span>
+                </button>
+                <a href="https://github.com/Gauravpatel44/Python-Keylogger" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.5rem 1rem;font-size:0.75rem;">
+                  <span>View Repository</span> <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+      <section id="experience" class="section-wrapper">
+        <div class="max-w-7xl">
+          
+          <div style="margin-bottom:1.5rem;">
+            <div class="section-pill">
+              <span>💼</span>
+              <span>PRACTICAL INDUSTRY ENGAGEMENT</span>
+            </div>
+            <h2 class="section-title">
+              Internships & <span class="text-electric-gradient">Industry Programs</span>
+            </h2>
+            <p class="section-subtitle">
+              Formal technical internships and corporate-sponsored skill initiatives conducted in partnership with AICTE, Edunet, Microsoft & Vodafone Idea Foundation.
+            </p>
+          </div>
+
+          <!-- Mobile Carousel (< md screens) -->
+          <div class="carousel-mobile-wrapper">
+            <div class="carousel-swipe-bar">
+              <span style="color:var(--electric-cyan);font-weight:bold;">
+                👆 Swipe internships <span id="expSwipeCount">(1 of 3)</span>
+              </span>
+              <div style="display:flex;align-items:center;gap:0.375rem;">
+                <button id="expPrevBtn" class="btn-icon" style="padding:0.25rem 0.5rem;" aria-label="Previous experience">‹</button>
+                <button id="expNextBtn" class="btn-icon" style="padding:0.25rem 0.5rem;" aria-label="Next experience">›</button>
+              </div>
+            </div>
+
+            <div id="experienceMobileSlider" class="carousel-slider scrollbar-none">
+              
+              <!-- Exp 1 -->
+              <div class="carousel-card bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;padding-bottom:0.625rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.625rem;">
+                    <span class="badge-level badge-hands-on">Internship</span>
+                    <span style="font-size:0.625rem;font-family:var(--font-mono);color:var(--text-muted);">4-Week Virtual</span>
+                  </div>
+                  <h3 style="font-size:1rem;font-weight:900;color:#ffffff;margin-bottom:0.25rem;">Virtual Internship on 'Cybersecurity with Gen AI'</h3>
+                  <div style="font-size:0.75rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.25rem;">Vodafone Idea Foundation & VOIS</div>
+                  <div style="font-size:0.6875rem;font-family:var(--font-mono);color:var(--text-muted);margin-bottom:0.625rem;">📅 09 Dec 2025 – 06 Jan 2026</div>
+                  <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;margin-bottom:0.75rem;">
+                    Completed AICTE and 'VOIS for Tech University Engagement Program' virtual internship implemented by Edunet Foundation.
+                  </p>
+                </div>
+                <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.15);">
+                  <a href="https://drive.google.com/file/d/1HSFoUFtK40ThU21Rjwgmab3xydswoBHX/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="width:100%;padding:0.375rem;font-size:0.6875rem;">
+                    <span>Verified Credential</span> <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Exp 2 -->
+              <div class="carousel-card bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;padding-bottom:0.625rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.625rem;">
+                    <span class="badge-level badge-hands-on">Internship</span>
+                    <span style="font-size:0.625rem;font-family:var(--font-mono);color:var(--text-muted);">4-Week Internship</span>
+                  </div>
+                  <h3 style="font-size:1rem;font-weight:900;color:#ffffff;margin-bottom:0.25rem;">Foundations of AI</h3>
+                  <div style="font-size:0.75rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.25rem;">Microsoft & Edunet Foundation</div>
+                  <div style="font-size:0.6875rem;font-family:var(--font-mono);color:var(--text-muted);margin-bottom:0.625rem;">📅 10 April 2025 – 10 May 2025</div>
+                  <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;margin-bottom:0.75rem;">
+                    4-week internship on Foundations of AI in collaboration with AICTE covering machine learning & computer vision basics.
+                  </p>
+                </div>
+                <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.15);">
+                  <a href="https://drive.google.com/file/d/1-Tj0QH2ksx0jEOFScX7qwM6aDm6kx0Cv/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="width:100%;padding:0.375rem;font-size:0.6875rem;">
+                    <span>Verified Credential</span> <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Exp 3 -->
+              <div class="carousel-card bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);">
+                <div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;padding-bottom:0.625rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.625rem;">
+                    <span class="badge-level badge-hands-on">Training</span>
+                    <span style="font-size:0.625rem;font-family:var(--font-mono);color:var(--text-muted);">2-Week Skill-Based</span>
+                  </div>
+                  <h3 style="font-size:1rem;font-weight:900;color:#ffffff;margin-bottom:0.25rem;">Front-End Web & AI Data Science</h3>
+                  <div style="font-size:0.75rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.25rem;">BharatCares & IBM SkillsBuild</div>
+                  <div style="font-size:0.6875rem;font-family:var(--font-mono);color:var(--text-muted);margin-bottom:0.625rem;">📅 15 June 2026 – 30 June 2026</div>
+                  <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;margin-bottom:0.75rem;">
+                    Comprehensive front-end development internship curriculum under industry mentor Mr. Tushar Khandelwal.
+                  </p>
+                </div>
+                <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.15);">
+                  <a href="https://drive.google.com/file/d/1pJ5ZBFU0sgW0EKWPeDgCWR5NpUTjqQIW/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="width:100%;padding:0.375rem;font-size:0.6875rem;">
+                    <span>Verified Credential</span> <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Dots -->
+            <div id="expDots" class="carousel-dots"></div>
+          </div>
+
+          <!-- Desktop Bento Grid (>= md screens) -->
+          <div class="desktop-grid-wrapper md:grid-cols-3" style="gap:1.25rem;">
+            
+            <!-- Exp 1 -->
+            <div class="bento-card" style="padding:1.5rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.875rem;">
+                  <span class="badge-level badge-hands-on">Internship</span>
+                  <span style="font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);">4-Week Virtual</span>
+                </div>
+                <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.375rem;">Virtual Internship on 'Cybersecurity with Gen AI'</h3>
+                <div style="font-size:0.8125rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.5rem;">Vodafone Idea Foundation & VOIS</div>
+                <div style="font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);margin-bottom:0.875rem;">📅 09 Dec 2025 – 06 Jan 2026</div>
+                <p style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;">
+                  Completed the AICTE and 'VOIS for Tech University Engagement Program' virtual internship implemented by Edunet Foundation. Built the Car Market Trends Data Analytics DIY Project-4.
+                </p>
+              </div>
+              <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.15);">
+                <a href="https://drive.google.com/file/d/1HSFoUFtK40ThU21Rjwgmab3xydswoBHX/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="width:100%;padding:0.5rem;font-size:0.75rem;">
+                  <span>View Verified Credential</span> <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Exp 2 -->
+            <div class="bento-card" style="padding:1.5rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.875rem;">
+                  <span class="badge-level badge-hands-on">Internship</span>
+                  <span style="font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);">4-Week Internship</span>
+                </div>
+                <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.375rem;">Foundations of AI</h3>
+                <div style="font-size:0.8125rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.5rem;">Microsoft & Edunet Foundation</div>
+                <div style="font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);margin-bottom:0.875rem;">📅 10 April 2025 – 10 May 2025</div>
+                <p style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;">
+                  Successfully completed a 4-week internship on Foundations of AI, a Microsoft initiative implemented by Edunet Foundation in collaboration with AICTE.
+                </p>
+              </div>
+              <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.15);">
+                <a href="https://drive.google.com/file/d/1-Tj0QH2ksx0jEOFScX7qwM6aDm6kx0Cv/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="width:100%;padding:0.5rem;font-size:0.75rem;">
+                  <span>View Verified Credential</span> <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Exp 3 -->
+            <div class="bento-card" style="padding:1.5rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:0.875rem;">
+                  <span class="badge-level badge-hands-on">Training</span>
+                  <span style="font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);">2-Week Skill-Based</span>
+                </div>
+                <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.375rem;">Front-End Web & AI Data Science</h3>
+                <div style="font-size:0.8125rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.5rem;">BharatCares & IBM SkillsBuild</div>
+                <div style="font-size:0.75rem;font-family:var(--font-mono);color:var(--text-muted);margin-bottom:0.875rem;">📅 15 June 2026 – 30 June 2026</div>
+                <p style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem;">
+                  Skill-based training curriculum under mentor Mr. Tushar Khandelwal. Focused on modern web layouts and AI data science architectures.
+                </p>
+              </div>
+              <div style="padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.15);">
+                <a href="https://drive.google.com/file/d/1pJ5ZBFU0sgW0EKWPeDgCWR5NpUTjqQIW/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="width:100%;padding:0.5rem;font-size:0.75rem;">
+                  <span>View Verified Credential</span> <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS SECTION -->
+      <section id="certifications" class="section-wrapper">
+        <div class="max-w-7xl">
+          
+          <div style="margin-bottom:1.5rem;">
+            <div class="section-pill">
+              <span>🏆</span>
+              <span>OFFICIAL CREDENTIAL DOCUMENTS</span>
+            </div>
+            <h2 class="section-title">
+              Verified <span class="text-electric-gradient">Industry Certifications</span>
+            </h2>
+            <p class="section-subtitle">
+              Official completion credentials verified from Microsoft AICTE, Vodafone Idea Foundation & VOIS, and BharatCares / IBM.
+            </p>
+          </div>
+
+          <!-- Mobile Carousel (< md screens) -->
+          <div class="carousel-mobile-wrapper">
+            <div class="carousel-swipe-bar">
+              <span style="color:var(--electric-cyan);font-weight:bold;">
+                👆 Swipe certificates <span id="certSwipeCount">(1 of 3)</span>
+              </span>
+              <div style="display:flex;align-items:center;gap:0.375rem;">
+                <button id="certPrevBtn" class="btn-icon" style="padding:0.25rem 0.5rem;" aria-label="Previous certificate">‹</button>
+                <button id="certNextBtn" class="btn-icon" style="padding:0.25rem 0.5rem;" aria-label="Next certificate">›</button>
+              </div>
+            </div>
+
+            <div id="certMobileSlider" class="carousel-slider scrollbar-none">
+              
+              <!-- Cert 1 -->
+              <div class="carousel-card bento-card" style="border:2px solid rgba(255,255,255,0.15);overflow:hidden;">
+                <div style="position:relative;height:10rem;width:100%;overflow:hidden;background:#000;cursor:pointer;border-bottom:1.5px solid rgba(255,255,255,0.15);" onclick="openCertificateModal('cert-vois-cybersecurity')">
+                  <img src="assets/certificates/vois-vi-certificate.png" alt="Cybersecurity with Gen AI" style="width:100%;height:100%;object-fit:cover;object-position:center;" />
+                  <div style="position:absolute;top:0.5rem;left:0.5rem;right:0.5rem;display:flex;justify-content:space-between;pointer-events:none;">
+                    <span style="padding:0.25rem 0.5rem;border-radius:0.5rem;background:rgba(0,0,0,0.8);border:1px solid rgba(255,255,255,0.2);font-size:0.625rem;font-family:var(--font-mono);color:#fff;">Cybersecurity</span>
+                  </div>
+                </div>
+                <div style="padding:1rem;">
+                  <div style="font-size:0.625rem;font-family:var(--font-mono);font-weight:900;color:var(--electric-cyan);text-transform:uppercase;margin-bottom:0.25rem;">Certificate of Internship</div>
+                  <h3 style="font-size:1rem;font-weight:900;color:#ffffff;margin-bottom:0.25rem;">Cybersecurity with Gen AI</h3>
+                  <div style="font-size:0.75rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.5rem;">Vodafone Idea Foundation & VOIS</div>
+                  <p style="font-size:0.6875rem;color:var(--text-secondary);margin-bottom:0.75rem;line-height:1.4;">
+                    AICTE and VOIS Tech University Engagement Program led Virtual Internship implemented by Edunet Foundation.
+                  </p>
+                </div>
+                <div style="padding:0.75rem 1rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                  <button onclick="openCertificateModal('cert-vois-cybersecurity')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.75rem;cursor:pointer;">
+                    🔍 Inspect
+                  </button>
+                  <a href="https://drive.google.com/file/d/1HSFoUFtK40ThU21Rjwgmab3xydswoBHX/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.375rem 0.75rem;font-size:0.6875rem;">
+                    <span>Google Drive</span> <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Cert 2 -->
+              <div class="carousel-card bento-card" style="border:2px solid rgba(255,255,255,0.15);overflow:hidden;">
+                <div style="position:relative;height:10rem;width:100%;overflow:hidden;background:#000;cursor:pointer;border-bottom:1.5px solid rgba(255,255,255,0.15);" onclick="openCertificateModal('cert-microsoft-ai')">
+                  <img src="assets/certificates/microsoft-ai-certificate.png" alt="Foundations of AI" style="width:100%;height:100%;object-fit:cover;object-position:center;" />
+                  <div style="position:absolute;top:0.5rem;left:0.5rem;right:0.5rem;display:flex;justify-content:space-between;pointer-events:none;">
+                    <span style="padding:0.25rem 0.5rem;border-radius:0.5rem;background:rgba(0,0,0,0.8);border:1px solid rgba(255,255,255,0.2);font-size:0.625rem;font-family:var(--font-mono);color:#fff;">AI & ML</span>
+                  </div>
+                </div>
+                <div style="padding:1rem;">
+                  <div style="font-size:0.625rem;font-family:var(--font-mono);font-weight:900;color:var(--electric-cyan);text-transform:uppercase;margin-bottom:0.25rem;">Certificate of Completion</div>
+                  <h3 style="font-size:1rem;font-weight:900;color:#ffffff;margin-bottom:0.25rem;">Foundations of AI</h3>
+                  <div style="font-size:0.75rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.5rem;">Microsoft & Edunet Foundation</div>
+                  <p style="font-size:0.6875rem;color:var(--text-secondary);margin-bottom:0.75rem;line-height:1.4;">
+                    4-week internship on Foundations of AI in collaboration with AICTE.
+                  </p>
+                </div>
+                <div style="padding:0.75rem 1rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                  <button onclick="openCertificateModal('cert-microsoft-ai')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.75rem;cursor:pointer;">
+                    🔍 Inspect
+                  </button>
+                  <a href="https://drive.google.com/file/d/1-Tj0QH2ksx0jEOFScX7qwM6aDm6kx0Cv/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.375rem 0.75rem;font-size:0.6875rem;">
+                    <span>Google Drive</span> <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Cert 3 -->
+              <div class="carousel-card bento-card" style="border:2px solid rgba(255,255,255,0.15);overflow:hidden;">
+                <div style="position:relative;height:10rem;width:100%;overflow:hidden;background:#000;cursor:pointer;border-bottom:1.5px solid rgba(255,255,255,0.15);" onclick="openCertificateModal('cert-ibm-bharatcares')">
+                  <img src="assets/certificates/ibm-bharatcares-certificate.png" alt="AI Data Science & Agentic Systems" style="width:100%;height:100%;object-fit:cover;object-position:center;" />
+                  <div style="position:absolute;top:0.5rem;left:0.5rem;right:0.5rem;display:flex;justify-content:space-between;pointer-events:none;">
+                    <span style="padding:0.25rem 0.5rem;border-radius:0.5rem;background:rgba(0,0,0,0.8);border:1px solid rgba(255,255,255,0.2);font-size:0.625rem;font-family:var(--font-mono);color:#fff;">Data Science</span>
+                  </div>
+                </div>
+                <div style="padding:1rem;">
+                  <div style="font-size:0.625rem;font-family:var(--font-mono);font-weight:900;color:var(--electric-cyan);text-transform:uppercase;margin-bottom:0.25rem;">Certificate of Training</div>
+                  <h3 style="font-size:1rem;font-weight:900;color:#ffffff;margin-bottom:0.25rem;">AI Data Science & Agentic Systems</h3>
+                  <div style="font-size:0.75rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.5rem;">BharatCares & IBM</div>
+                  <p style="font-size:0.6875rem;color:var(--text-secondary);margin-bottom:0.75rem;line-height:1.4;">
+                    Skill-based training in AI Data Science and front-end engineering under Mr. Tushar Khandelwal.
+                  </p>
+                </div>
+                <div style="padding:0.75rem 1rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                  <button onclick="openCertificateModal('cert-ibm-bharatcares')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.75rem;cursor:pointer;">
+                    🔍 Inspect
+                  </button>
+                  <a href="https://drive.google.com/file/d/1pJ5ZBFU0sgW0EKWPeDgCWR5NpUTjqQIW/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.375rem 0.75rem;font-size:0.6875rem;">
+                    <span>Google Drive</span> <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Dots -->
+            <div id="certDots" class="carousel-dots"></div>
+          </div>
+
+          <!-- Desktop Bento Grid (>= md screens) -->
+          <div class="desktop-grid-wrapper md:grid-cols-3" style="gap:1.25rem;">
+            
+            <!-- Cert 1 -->
+            <div class="bento-card" style="border:2px solid rgba(255,255,255,0.15);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="position:relative;height:12rem;width:100%;overflow:hidden;background:#000;cursor:pointer;border-bottom:1.5px solid rgba(255,255,255,0.15);" onclick="openCertificateModal('cert-vois-cybersecurity')">
+                  <img src="assets/certificates/vois-vi-certificate.png" alt="Cybersecurity with Gen AI" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.5s ease;" />
+                  <div style="position:absolute;top:0.625rem;left:0.625rem;right:0.625rem;display:flex;justify-content:space-between;pointer-events:none;">
+                    <span style="padding:0.25rem 0.625rem;border-radius:9999px;background:rgba(0,0,0,0.85);border:1px solid rgba(255,255,255,0.2);font-size:0.6875rem;font-family:var(--font-mono);color:#fff;">Cybersecurity</span>
+                  </div>
+                </div>
+                <div style="padding:1.25rem;">
+                  <div style="font-size:0.6875rem;font-family:var(--font-mono);font-weight:900;color:var(--electric-cyan);text-transform:uppercase;margin-bottom:0.25rem;">Certificate of Internship</div>
+                  <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.25rem;">Cybersecurity with Gen AI</h3>
+                  <div style="font-size:0.8125rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.5rem;">Vodafone Idea Foundation & VOIS</div>
+                  <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;margin-bottom:0.875rem;">
+                    Completed the AICTE and VOIS Tech University Engagement Program led Virtual Internship implemented by Edunet Foundation.
+                  </p>
+                </div>
+              </div>
+              <div style="padding:0.875rem 1.25rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                <button onclick="openCertificateModal('cert-vois-cybersecurity')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.8125rem;cursor:pointer;">
+                  🔍 Inspect
+                </button>
+                <a href="https://drive.google.com/file/d/1HSFoUFtK40ThU21Rjwgmab3xydswoBHX/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.375rem 0.875rem;font-size:0.75rem;">
+                  <span>Google Drive</span> <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Cert 2 -->
+            <div class="bento-card" style="border:2px solid rgba(255,255,255,0.15);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="position:relative;height:12rem;width:100%;overflow:hidden;background:#000;cursor:pointer;border-bottom:1.5px solid rgba(255,255,255,0.15);" onclick="openCertificateModal('cert-microsoft-ai')">
+                  <img src="assets/certificates/microsoft-ai-certificate.png" alt="Foundations of AI" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.5s ease;" />
+                  <div style="position:absolute;top:0.625rem;left:0.625rem;right:0.625rem;display:flex;justify-content:space-between;pointer-events:none;">
+                    <span style="padding:0.25rem 0.625rem;border-radius:9999px;background:rgba(0,0,0,0.85);border:1px solid rgba(255,255,255,0.2);font-size:0.6875rem;font-family:var(--font-mono);color:#fff;">AI & ML</span>
+                  </div>
+                </div>
+                <div style="padding:1.25rem;">
+                  <div style="font-size:0.6875rem;font-family:var(--font-mono);font-weight:900;color:var(--electric-cyan);text-transform:uppercase;margin-bottom:0.25rem;">Certificate of Completion</div>
+                  <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.25rem;">Foundations of AI</h3>
+                  <div style="font-size:0.8125rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.5rem;">Microsoft & Edunet Foundation</div>
+                  <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;margin-bottom:0.875rem;">
+                    Successfully completed a 4-week internship on Foundations of AI, an initiative implemented by Edunet in collaboration with AICTE.
+                  </p>
+                </div>
+              </div>
+              <div style="padding:0.875rem 1.25rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                <button onclick="openCertificateModal('cert-microsoft-ai')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.8125rem;cursor:pointer;">
+                  🔍 Inspect
+                </button>
+                <a href="https://drive.google.com/file/d/1-Tj0QH2ksx0jEOFScX7qwM6aDm6kx0Cv/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.375rem 0.875rem;font-size:0.75rem;">
+                  <span>Google Drive</span> <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Cert 3 -->
+            <div class="bento-card" style="border:2px solid rgba(255,255,255,0.15);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="position:relative;height:12rem;width:100%;overflow:hidden;background:#000;cursor:pointer;border-bottom:1.5px solid rgba(255,255,255,0.15);" onclick="openCertificateModal('cert-ibm-bharatcares')">
+                  <img src="assets/certificates/ibm-bharatcares-certificate.png" alt="AI Data Science & Agentic Systems" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.5s ease;" />
+                  <div style="position:absolute;top:0.625rem;left:0.625rem;right:0.625rem;display:flex;justify-content:space-between;pointer-events:none;">
+                    <span style="padding:0.25rem 0.625rem;border-radius:9999px;background:rgba(0,0,0,0.85);border:1px solid rgba(255,255,255,0.2);font-size:0.6875rem;font-family:var(--font-mono);color:#fff;">Data Science</span>
+                  </div>
+                </div>
+                <div style="padding:1.25rem;">
+                  <div style="font-size:0.6875rem;font-family:var(--font-mono);font-weight:900;color:var(--electric-cyan);text-transform:uppercase;margin-bottom:0.25rem;">Certificate of Training</div>
+                  <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.25rem;">AI Data Science & Agentic Systems</h3>
+                  <div style="font-size:0.8125rem;font-weight:bold;color:var(--electric-emerald);margin-bottom:0.5rem;">BharatCares & IBM</div>
+                  <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;margin-bottom:0.875rem;">
+                    Completed Skill Based Training in the field of AI Data Science & Agentic Systems under mentor Mr. Tushar Khandelwal.
+                  </p>
+                </div>
+              </div>
+              <div style="padding:0.875rem 1.25rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;">
+                <button onclick="openCertificateModal('cert-ibm-bharatcares')" style="background:none;border:none;color:var(--electric-cyan);font-weight:900;font-size:0.8125rem;cursor:pointer;">
+                  🔍 Inspect
+                </button>
+                <a href="https://drive.google.com/file/d/1pJ5ZBFU0sgW0EKWPeDgCWR5NpUTjqQIW/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.375rem 0.875rem;font-size:0.75rem;">
+                  <span>Google Drive</span> <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- GITHUB SECTION -->
+      <section id="github" class="section-wrapper">
+        <div class="max-w-7xl">
+          
+          <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem;" class="md:flex-row md:items-end md:justify-between">
+            <div>
+              <div class="section-pill">
+                <span>★</span>
+                <span>LIVE REPOSITORY DISCOVERY</span>
+              </div>
+              <h2 class="section-title">
+                Open Source & <span class="text-electric-gradient">GitHub Activity</span>
+              </h2>
+              <p class="section-subtitle">
+                Live repositories fetched directly from GitHub API for user @Gauravpatel44.
+              </p>
+            </div>
+
+            <a href="https://github.com/Gauravpatel44" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.5rem 1rem;font-size:0.75rem;align-self:flex-start;">
+              <span>Visit @Gauravpatel44</span> <span>↗</span>
+            </a>
+          </div>
+
+          <!-- Mobile Carousel (< md screens) -->
+          <div class="carousel-mobile-wrapper">
+            <div class="carousel-swipe-bar">
+              <span style="color:var(--electric-cyan);font-weight:bold;">
+                👆 Swipe repositories <span id="githubSwipeCount">(1 of 4)</span>
+              </span>
+              <div style="display:flex;align-items:center;gap:0.375rem;">
+                <button id="githubPrevBtn" class="btn-icon" style="padding:0.25rem 0.5rem;" aria-label="Previous repo">‹</button>
+                <button id="githubNextBtn" class="btn-icon" style="padding:0.25rem 0.5rem;" aria-label="Next repo">›</button>
+              </div>
+            </div>
+
+            <div id="githubMobileSlider" class="carousel-slider scrollbar-none"></div>
+            <div id="githubDots" class="carousel-dots"></div>
+          </div>
+
+          <!-- Desktop Bento Grid (>= md screens) -->
+          <div id="githubDesktopGrid" class="desktop-grid-wrapper md:grid-cols-2 lg:grid-cols-4" style="gap:1rem;"></div>
+
+        </div>
+      </section>
+
+      <!-- ACHIEVEMENTS SECTION -->
+      <section id="achievements" class="section-wrapper">
+        <div class="max-w-7xl">
+          
+          <div style="margin-bottom:1.5rem;">
+            <div class="section-pill">
+              <span>🏆</span>
+              <span>MILESTONES & RECOGNITION</span>
+            </div>
+            <h2 class="section-title">
+              Key Achievements & <span class="text-electric-gradient">Milestones</span>
+            </h2>
+            <p class="section-subtitle">
+              Highlighted academic distinctions, software milestones, and project recognitions.
+            </p>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;" class="md:grid-cols-3">
+            
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;gap:1rem;">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
+                  <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-amber);">🏆</span>
+                  <span style="font-size:0.625rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);background:rgba(8,51,68,0.8);padding:0.125rem 0.5rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">Academic</span>
+                </div>
+                <h3 style="font-size:1rem;font-weight:900;color:#ffffff;margin-bottom:0.375rem;">Semester 4 Top Academic Ranking (9.35 SPI)</h3>
+                <div style="font-size:0.75rem;font-family:var(--font-mono);color:var(--electric-emerald);font-weight:bold;margin-bottom:0.5rem;">Government Polytechnic Valsad · 2025</div>
+                <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;">
+                  Achieved a peak semester performance index of 9.35, placing among the top percentile in the Diploma IT cohort.
+                </p>
+              </div>
+              <div style="padding-top:0.625rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;font-size:0.75rem;font-family:var(--font-mono);">
+                <span style="color:var(--text-muted);">Result:</span>
+                <span style="color:#ffffff;font-weight:900;background:rgba(4,8,18,0.9);padding:0.125rem 0.625rem;border-radius:0.375rem;border:1px solid rgba(255,255,255,0.1);">9.35 SPI</span>
+              </div>
+            </div>
+
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;gap:1rem;">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
+                  <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-amber);">🏆</span>
+                  <span style="font-size:0.625rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);background:rgba(8,51,68,0.8);padding:0.125rem 0.5rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">Project</span>
+                </div>
+                <h3 style="font-size:1rem;font-weight:900;color:#ffffff;margin-bottom:0.375rem;">Completed VOIS & Edunet Project-4 Challenge</h3>
+                <div style="font-size:0.75rem;font-family:var(--font-mono);color:var(--electric-emerald);font-weight:bold;margin-bottom:0.5rem;">Vodafone Idea Foundation · 2026</div>
+                <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;">
+                  Successfully engineered the Car Market Trends Analysis with Car Dekho Data repository as an independent project initiative.
+                </p>
+              </div>
+              <div style="padding-top:0.625rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;font-size:0.75rem;font-family:var(--font-mono);">
+                <span style="color:var(--text-muted);">Result:</span>
+                <span style="color:#ffffff;font-weight:900;background:rgba(4,8,18,0.9);padding:0.125rem 0.625rem;border-radius:0.375rem;border:1px solid rgba(255,255,255,0.1);">VOIS Project-4</span>
+              </div>
+            </div>
+
+            <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:space-between;gap:1rem;">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.75rem;">
+                  <span style="padding:0.5rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);color:var(--electric-amber);">🏆</span>
+                  <span style="font-size:0.625rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);background:rgba(8,51,68,0.8);padding:0.125rem 0.5rem;border-radius:0.375rem;border:1px solid var(--border-cyan);">Open Source</span>
+                </div>
+                <h3 style="font-size:1rem;font-weight:900;color:#ffffff;margin-bottom:0.375rem;">Published Rakshak Connect Safety App</h3>
+                <div style="font-size:0.75rem;font-family:var(--font-mono);color:var(--electric-emerald);font-weight:bold;margin-bottom:0.5rem;">GitHub Open Source · 2026</div>
+                <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;">
+                  Architected and released a complete Flutter citizen safety application with SOS SMS broadcast and GPS integration.
+                </p>
+              </div>
+              <div style="padding-top:0.625rem;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;font-size:0.75rem;font-family:var(--font-mono);">
+                <span style="color:var(--text-muted);">Result:</span>
+                <span style="color:#ffffff;font-weight:900;background:rgba(4,8,18,0.9);padding:0.125rem 0.625rem;border-radius:0.375rem;border:1px solid rgba(255,255,255,0.1);">Open Source</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- RESUME SECTION -->
+      <section id="resume" class="section-wrapper">
+        <div class="max-w-7xl">
+          <div class="bento-card" style="padding:2rem;border:2px solid var(--border-cyan);box-shadow:0 25px 50px -12px rgba(0,0,0,0.7);">
+            <div style="display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;" class="lg:grid-cols-12">
+              
+              <!-- Left (8 cols) -->
+              <div style="display:flex;flex-direction:column;gap:1rem;" class="lg:col-span-8">
+                <div class="section-pill" style="align-self:flex-start;">
+                  <span>📄</span>
+                  <span>OFFICIAL CURRICULUM VITAE</span>
+                </div>
+
+                <h2 style="font-size:2rem;font-weight:900;color:#ffffff;letter-spacing:-0.025em;line-height:1.2;">
+                  Download & Review <span class="text-electric-gradient">Official Resume</span>
+                </h2>
+
+                <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">
+                  Structured document detailing complete academic history at Government Polytechnic Valsad, verified virtual internships with Microsoft & VOIS, and real open-source GitHub repositories.
+                </p>
+
+                <div style="display:grid;grid-template-columns:1fr;gap:0.5rem;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);" class="sm:grid-cols-2">
+                  <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:0.5rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);">
+                    <span style="color:var(--electric-emerald);">✔</span> Updated with Semester 4 SPI (9.35)
+                  </div>
+                  <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;border-radius:0.5rem;background:rgba(4,8,18,0.8);border:1px solid rgba(255,255,255,0.1);">
+                    <span style="color:var(--electric-emerald);">✔</span> Includes Verified Certificate IDs
+                  </div>
+                </div>
+
+                <div style="margin-top:0.5rem;">
+                  <a href="https://drive.google.com/file/d/18EFM66SFcyxiyGr9VfCf2oqgU9ObeeaP/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.75rem 1.5rem;font-size:0.875rem;">
+                    <span>Open Full PDF in Google Drive</span> <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Badge (4 cols) -->
+              <div style="display:flex;justify-content:center;" class="lg:col-span-4">
+                <div style="width:100%;max-width:20rem;padding:1.5rem;border-radius:1rem;background:rgba(4,8,18,0.95);border:2px solid rgba(255,255,255,0.15);text-align:center;display:flex;flex-direction:column;gap:0.75rem;font-family:var(--font-mono);font-size:0.75rem;">
+                  <div style="width:3.5rem;height:3.5rem;margin:0 auto;border-radius:1rem;background:rgba(8,51,68,0.9);border:1px solid var(--border-cyan);display:flex;align-items:center;justify-content:center;color:var(--electric-cyan);font-size:1.5rem;box-shadow:var(--glow-cyan);">
+                    📄
+                  </div>
+                  <div>
+                    <div style="font-weight:900;font-size:0.95rem;color:#ffffff;">Patel Gaurav Dinesh</div>
+                    <div style="font-size:0.6875rem;color:var(--text-muted);margin-top:0.125rem;">Diploma in IT · 2024–2027</div>
+                  </div>
+                  <div style="padding:0.5rem;border-radius:0.5rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.1);font-size:0.6875rem;color:var(--electric-emerald);font-weight:bold;">
+                    PDF Document · Verified Drive Link
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section-wrapper">
+        <div class="max-w-7xl">
+          
+          <div style="margin-bottom:1.5rem;">
+            <div class="section-pill">
+              <span>💬</span>
+              <span>COMMUNICATION & INQUIRIES</span>
+            </div>
+            <h2 class="section-title">
+              Get in <span class="text-electric-gradient">Direct Contact</span>
+            </h2>
+            <p class="section-subtitle">
+              Open for software development collaborations, academic inquiries, and technical roles.
+            </p>
+          </div>
+
+          <!-- Bento Grid -->
+          <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;" class="lg:grid-cols-12">
+            
+            <!-- Left Contact Cards (5 cols) -->
+            <div style="display:flex;flex-direction:column;gap:1rem;" class="lg:col-span-5">
+              
+              <!-- Email Card -->
+              <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;gap:0.75rem;">
+                <div style="display:flex;align-items:center;gap:0.75rem;">
+                  <div style="padding:0.625rem;border-radius:0.75rem;background:rgba(8,51,68,0.9);border:1px solid var(--border-cyan);color:var(--electric-cyan);">✉️</div>
+                  <div>
+                    <div style="font-size:0.625rem;font-family:var(--font-mono);color:var(--text-muted);text-transform:uppercase;font-weight:bold;">Email Address</div>
+                    <div style="font-size:0.875rem;font-weight:900;color:#ffffff;">gauravpatel2060@gmail.com</div>
+                  </div>
+                </div>
+                <button onclick="copyEmail()" class="btn-icon copy-email-btn" style="padding:0.5rem;" title="Copy Email">
+                  📋
+                </button>
+              </div>
+
+              <!-- Phone Card -->
+              <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;gap:0.75rem;">
+                <div style="display:flex;align-items:center;gap:0.75rem;">
+                  <div style="padding:0.625rem;border-radius:0.75rem;background:rgba(6,78,59,0.9);border:1px solid var(--border-emerald);color:var(--electric-emerald);">📞</div>
+                  <div>
+                    <div style="font-size:0.625rem;font-family:var(--font-mono);color:var(--text-muted);text-transform:uppercase;font-weight:bold;">Phone / WhatsApp</div>
+                    <div style="font-size:0.875rem;font-weight:900;color:#ffffff;">+91 9510182060</div>
+                  </div>
+                </div>
+                <button onclick="copyPhone()" class="btn-icon copy-phone-btn" style="padding:0.5rem;" title="Copy Phone">
+                  📋
+                </button>
+              </div>
+
+              <!-- Location Card -->
+              <div class="bento-card" style="padding:1.25rem;border:2px solid rgba(255,255,255,0.15);display:flex;align-items:center;gap:0.75rem;">
+                <div style="padding:0.625rem;border-radius:0.75rem;background:rgba(88,28,135,0.9);border:1px solid rgba(168,85,247,0.4);color:var(--electric-purple);">📍</div>
+                <div>
+                  <div style="font-size:0.625rem;font-family:var(--font-mono);color:var(--text-muted);text-transform:uppercase;font-weight:bold;">Location & Campus</div>
+                  <div style="font-size:0.875rem;font-weight:900;color:#ffffff;">Valsad, Gujarat, India</div>
+                  <div style="font-size:0.6875rem;color:var(--text-muted);font-family:var(--font-mono);">Government Polytechnic Valsad</div>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;font-family:var(--font-mono);font-size:0.75rem;">
+                <a href="https://github.com/Gauravpatel44" target="_blank" rel="noopener noreferrer" class="bento-card" style="padding:0.75rem;text-align:center;text-decoration:none;color:#fff;display:flex;align-items:center;justify-content:center;gap:0.375rem;">
+                  <span style="color:var(--electric-cyan);">★</span> GitHub Profile
+                </a>
+                <a href="https://www.linkedin.com/in/gaurav-patel-7ab896375" target="_blank" rel="noopener noreferrer" class="bento-card" style="padding:0.75rem;text-align:center;text-decoration:none;color:#fff;display:flex;align-items:center;justify-content:center;gap:0.375rem;">
+                  <span style="color:var(--electric-emerald);">★</span> LinkedIn Profile
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Right Message Form (7 cols) -->
+            <div class="bento-card" style="padding:1.5rem;" class="lg:col-span-7">
+              <h3 style="font-size:1.125rem;font-weight:900;color:#ffffff;margin-bottom:0.25rem;">
+                Send Direct Message
+              </h3>
+              <p style="font-size:0.75rem;color:var(--text-secondary);margin-bottom:1rem;">
+                Fill out the form below to send an immediate message directly to Gaurav's inbox.
+              </p>
+
+              <!-- Success Toast -->
+              <div id="contactFormSuccess" class="toast-success" style="display:none;margin-bottom:1rem;">
+                <div style="font-size:1.5rem;margin-bottom:0.25rem;">✔</div>
+                <div style="font-weight:bold;color:#ffffff;font-size:0.875rem;">Draft Created Successfully!</div>
+                <div style="color:var(--text-secondary);font-size:0.75rem;margin-top:0.25rem;">Your email client has opened with the pre-filled message.</div>
+              </div>
+
+              <!-- Form -->
+              <form id="contactForm">
+                <div style="display:grid;grid-template-columns:1fr;gap:0.75rem;" class="sm:grid-cols-2">
+                  <div class="form-group">
+                    <label class="form-label">Your Name *</label>
+                    <input type="text" id="contactName" required placeholder="John Doe" class="form-input" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Your Email *</label>
+                    <input type="email" id="contactEmail" required placeholder="john@example.com" class="form-input" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Subject *</label>
+                  <input type="text" id="contactSubject" required placeholder="Collaboration / Project Inquiry" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Your Message *</label>
+                  <textarea id="contactMessage" required rows="4" placeholder="Hi Gaurav, I reviewed your Rakshak Connect project and would like to connect..." class="form-textarea" style="resize:none;"></textarea>
+                </div>
+
+                <button type="submit" class="btn-electric" style="width:100%;padding:0.75rem;font-size:0.75rem;">
+                  <span>Send Message to Gaurav</span> <span>✈</span>
+                </button>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="padding-top:2.5rem;padding-bottom:2.5rem;border-top:1px solid rgba(255,255,255,0.1);position:relative;z-index:10;font-family:var(--font-mono);font-size:0.75rem;">
+      <div class="max-w-7xl">
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:1rem;" class="sm:flex-row">
+          
+          <div style="display:flex;align-items:center;gap:0.5rem;">
+            <span style="color:var(--electric-cyan);">💻</span>
+            <span style="font-weight:900;color:#ffffff;font-size:0.875rem;">
+              GAURAV<span class="text-electric-gradient">.DEV</span>
+            </span>
+          </div>
+
+          <div style="color:var(--text-muted);text-align:center;">
+            Built with HTML5, CSS3, Vanilla JavaScript & Canvas Physics · Valsad, Gujarat
+          </div>
+
+          <div style="display:flex;align-items:center;gap:0.625rem;">
+            <a href="https://github.com/Gauravpatel44" target="_blank" rel="noopener noreferrer" class="btn-icon" style="padding:0.5rem;" title="GitHub">★</a>
+            <a href="https://www.linkedin.com/in/gaurav-patel-7ab896375" target="_blank" rel="noopener noreferrer" class="btn-icon" style="padding:0.5rem;" title="LinkedIn">in</a>
+            <a href="mailto:gauravpatel2060@gmail.com" class="btn-icon" style="padding:0.5rem;" title="Email">✉</a>
+            <button onclick="scrollToTop()" class="btn-icon" style="padding:0.5rem;" title="Back to Top">↑</button>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div id="projectModal" class="modal-backdrop">
+    <div class="modal-backdrop-overlay" onclick="closeProjectModal()" style="position:fixed;inset:0;"></div>
+    <div class="modal-dialog">
+      
+      <div class="modal-header">
+        <div style="display:flex;align-items:center;gap:0.625rem;">
+          <span id="modalProjectCategory" style="font-size:0.6875rem;font-family:var(--font-mono);font-weight:900;color:var(--electric-cyan);background:rgba(8,51,68,0.9);padding:0.125rem 0.625rem;border-radius:0.375rem;border:1px solid var(--border-cyan);"></span>
+          <h3 id="modalProjectTitle" style="font-size:1.125rem;font-weight:900;color:#ffffff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:320px;"></h3>
+        </div>
+        <button onclick="closeProjectModal()" class="btn-icon" style="padding:0.375rem 0.625rem;font-size:1rem;color:#fff;" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- Architecture & Purpose -->
+        <div>
+          <h4 style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.375rem;">
+            Project Architecture & Purpose
+          </h4>
+          <p id="modalProjectDescription" style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.6;"></p>
+        </div>
+
+        <!-- Problem & Solution Grid -->
+        <div style="display:grid;grid-template-columns:1fr;gap:0.75rem;font-family:var(--font-mono);font-size:0.75rem;" class="sm:grid-cols-2">
+          <div style="padding:0.875rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);">
+            <div style="display:flex;align-items:center;gap:0.375rem;color:var(--electric-rose);font-weight:bold;margin-bottom:0.25rem;">
+              <span>⚠️</span> The Problem Space
+            </div>
+            <p id="modalProjectProblem" style="color:var(--text-secondary);font-size:0.6875rem;line-height:1.5;"></p>
+          </div>
+
+          <div style="padding:0.875rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);">
+            <div style="display:flex;align-items:center;gap:0.375rem;color:var(--electric-emerald);font-weight:bold;margin-bottom:0.25rem;">
+              <span>💡</span> Engineering Solution
+            </div>
+            <p id="modalProjectSolution" style="color:var(--text-secondary);font-size:0.6875rem;line-height:1.5;"></p>
+          </div>
+        </div>
+
+        <!-- Key Features -->
+        <div>
+          <h4 style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--electric-cyan);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">
+            Key Technical Capabilities
+          </h4>
+          <div id="modalProjectFeatures" style="display:grid;grid-template-columns:1fr;gap:0.5rem;" class="sm:grid-cols-2"></div>
+        </div>
+
+        <!-- Technologies -->
+        <div>
+          <h4 style="font-size:0.75rem;font-family:var(--font-mono);font-weight:bold;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem;">
+            Tooling & Technologies
+          </h4>
+          <div id="modalProjectTechs" style="display:flex;flex-wrap:wrap;gap:0.375rem;"></div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button onclick="closeProjectModal()" class="btn-outline" style="padding:0.375rem 0.875rem;font-size:0.75rem;">
+          Close
+        </button>
+
+        <a id="modalProjectGithubLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.5rem 1rem;font-size:0.75rem;">
+          <span>Open GitHub Repository</span> <span>↗</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CERTIFICATE INSPECTION MODAL -->
+  <div id="certificateModal" class="modal-backdrop">
+    <div class="modal-backdrop-overlay" onclick="closeCertificateModal()" style="position:fixed;inset:0;"></div>
+    <div class="modal-dialog">
+      
+      <div class="modal-header">
+        <div style="display:flex;align-items:center;gap:0.625rem;">
+          <div>
+            <span id="certModalType" style="font-size:0.625rem;font-family:var(--font-mono);color:var(--electric-cyan);font-weight:900;text-transform:uppercase;letter-spacing:0.05em;"></span>
+            <h3 id="certModalTitle" style="font-size:1rem;font-weight:900;color:#ffffff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:320px;"></h3>
+          </div>
+        </div>
+        <button onclick="closeCertificateModal()" class="btn-icon" style="padding:0.375rem 0.625rem;font-size:1rem;color:#fff;" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Image Viewer -->
+        <div style="border-radius:0.75rem;overflow:hidden;border:2px solid var(--border-cyan);background:#000;">
+          <img id="certModalImage" src="" alt="" style="width:100%;height:auto;max-height:380px;object-fit:contain;display:block;margin:0 auto;" />
+        </div>
+
+        <!-- Metadata Breakdown -->
+        <div style="display:flex;flex-direction:column;gap:0.5rem;font-family:var(--font-mono);font-size:0.75rem;">
+          <div style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);display:flex;justify-content:space-between;">
+            <span style="color:var(--text-muted);font-weight:bold;">Issuing Authority:</span>
+            <span id="certModalIssuer" style="font-weight:900;color:#ffffff;"></span>
+          </div>
+          <div style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);display:flex;justify-content:space-between;">
+            <span style="color:var(--text-muted);font-weight:bold;">Collaborating Partners:</span>
+            <span id="certModalPartners" style="color:var(--electric-cyan);font-weight:bold;"></span>
+          </div>
+          <div style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);display:flex;justify-content:space-between;">
+            <span style="color:var(--text-muted);font-weight:bold;">Conducted Dates:</span>
+            <span id="certModalDates" style="color:var(--electric-emerald);font-weight:900;"></span>
+          </div>
+          <div style="padding:0.625rem;border-radius:0.75rem;background:rgba(4,8,18,0.9);border:1px solid rgba(255,255,255,0.15);display:flex;justify-content:space-between;">
+            <span style="color:var(--text-muted);font-weight:bold;">Student ID / Reg:</span>
+            <span id="certModalId" style="color:var(--electric-cyan);font-weight:900;"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <span style="font-size:0.75rem;font-family:var(--font-mono);color:var(--electric-emerald);font-weight:bold;">
+          ✔ Verified Credential
+        </span>
+
+        <div style="display:flex;align-items:center;gap:0.5rem;">
+          <button onclick="closeCertificateModal()" class="btn-outline" style="padding:0.375rem 0.875rem;font-size:0.75rem;">
+            Close
+          </button>
+          <a id="certModalDriveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-electric" style="padding:0.5rem 1rem;font-size:0.75rem;">
+            <span>View Original in Drive</span> <span>↗</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Vanilla JavaScript Logic -->
+  <script src="js/script.js"></script>
+</body>
 </html>

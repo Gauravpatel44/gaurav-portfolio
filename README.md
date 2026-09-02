@@ -2,88 +2,68 @@
 
 A modern, high-contrast, responsive developer portfolio and technical showcase engineered for **Gaurav Patel** (Diploma in Information Technology Student at Government Polytechnic Valsad, Software Developer, and Aspiring IT Professional).
 
+Built exclusively with **pure HTML5, CSS3, and Vanilla JavaScript** — zero build steps, zero node dependencies, instant loading in any browser and on GitHub Pages.
+
 ---
 
 ## 🏗️ Architecture & Directory Structure
 
 ```text
-SOSappLandingPage/
-├── assets/                           # Raw development & archive assets
-│   └── raw-certificates/            # Original source certificate captures
-├── public/                           # Static assets served directly
-│   └── certificates/                 # Optimized certificate documents
-│       ├── ibm-bharatcares-certificate.png
-│       ├── microsoft-ai-certificate.png
-│       └── vois-vi-certificate.png
-├── src/                              # Application source code
-│   ├── components/                   # Modular UI components
-│   │   ├── About.tsx                 # Technical story & applied pillars
-│   │   ├── Achievements.tsx          # Key milestones & metrics
-│   │   ├── Certifications.tsx        # Verified credential showcase & image inspection
-│   │   ├── Contact.tsx               # Contact information & quick dispatch form
-│   │   ├── Education.tsx             # Academic pathway & SPI tracker (Sem 1–4)
-│   │   ├── Experience.tsx            # Virtual internships & training timeline
-│   │   ├── Footer.tsx                # High-contrast footer with social links
-│   │   ├── GitHubHub.tsx             # Live repository feed & sync
-│   │   ├── Hero.tsx                  # Interactive Bento hero with live code terminal
-│   │   ├── Navbar.tsx                # Floating navigation bar with active indicators
-│   │   ├── ProjectModal.tsx          # Detailed case study inspection modal
-│   │   ├── Projects.tsx              # Featured real GitHub projects Bento grid
-│   │   ├── ResumeSection.tsx         # Curriculum vitae download callout
-│   │   ├── Skills.tsx                # Technical skills matrix with domain filters
-│   │   ├── StatsBar.tsx              # High-contrast metrics & summary cards
-│   │   └── index.ts                  # Component barrel exports
-│   ├── data/                         # Portfolio datasets & configuration
-│   │   ├── portfolioData.ts          # Core profile, education, project & certificate data
-│   │   └── index.ts                  # Data barrel exports
-│   ├── services/                     # External APIs & data services
-│   │   ├── githubService.ts          # GitHub REST API repository fetcher
-│   │   └── index.ts                  # Service barrel exports
-│   ├── types/                        # TypeScript type definitions
-│   │   ├── portfolio.ts              # Data interfaces (Projects, Certs, Education, etc.)
-│   │   └── index.ts                  # Type barrel exports
-│   ├── App.tsx                       # Root application component & scroll listener
-│   ├── index.css                     # Global design tokens, Bento styles & animations
-│   └── main.tsx                      # Vite React entry point
-├── .gitignore                        # Git ignore specifications
-├── index.html                        # HTML entry point with SEO & JSON-LD metadata
-├── package.json                      # Project dependencies & npm scripts
-├── postcss.config.js                 # PostCSS configuration
-├── tailwind.config.js                # Tailwind theme extensions & electric color palette
-├── tsconfig.json                     # TypeScript compiler configuration
-├── tsconfig.node.json                # TypeScript Vite configuration
-└── vite.config.ts                    # Vite build configuration
+Portfolio/
+│
+├── index.html                  # Semantic HTML5 document containing all sections & modals
+│
+├── css/
+│   └── style.css               # Complete standalone CSS3 stylesheet with design tokens & responsive rules
+│
+├── js/
+│   └── script.js               # Vanilla JavaScript for canvas physics, modals, carousels, scrollspy, GitHub API
+│
+├── assets/                     # Portfolio assets & document media
+│   ├── certificates/           # Verified certificate PNGs
+│   │   ├── ibm-bharatcares-certificate.png
+│   │   ├── microsoft-ai-certificate.png
+│   │   └── vois-vi-certificate.png
+│   └── favicon.svg             # High-tech monogram favicon
+│
+├── favicon.svg                 # Root favicon
+├── robots.txt                  # SEO crawler instructions
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # Automated static GitHub Pages deployment
+└── README.md                   # Project documentation
 ```
 
 ---
 
 ## ⚡ Tech Stack
 
-- **Framework**: React 18 with TypeScript
-- **Bundler & Dev Server**: Vite
-- **Styling**: Tailwind CSS + Custom CSS Design System
-- **Icons**: Lucide React
-- **Design System**: High-Contrast Bento-Grid Architecture, Deep Space Canvas, Electric Accent Lighting
+- **Markup**: Pure Semantic HTML5
+- **Styling**: Vanilla CSS3 (Custom Design System with CSS Variables, Bento Cards, Glassmorphism, Micro-animations)
+- **Scripting**: Vanilla JavaScript (ES6+, Canvas 2D Physics, DOM event listeners, Fetch API)
+- **Fonts**: Inter & JetBrains Mono (Google Fonts)
+- **Deployment**: GitHub Pages (Static Hosting)
 
 ---
 
-## 🚀 Getting Started
+## 🚀 How to Run Locally
 
-### 1. Install Dependencies
-```bash
-npm install
-```
+Because this project is built with standard web technologies, **no build step or `npm install` is needed**.
 
-### 2. Run Locally (Development Server)
-```bash
-npm run dev
-```
-The application will launch at `http://localhost:3000/`.
+### Option 1: Direct File Opening
+Double-click `index.html` to open it in your web browser.
 
-### 3. Build for Production
+### Option 2: Local Static Server
+If you prefer running via a local server (e.g. Python or VS Code Live Server):
+
 ```bash
-npm run build
+# Using Python
+python -m http.server 8000
+
+# Using Node (npx)
+npx serve .
 ```
+Visit `http://localhost:8000` in your browser.
 
 ---
 
