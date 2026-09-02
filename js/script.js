@@ -527,13 +527,14 @@ function initClipboardAndForm() {
 }
 
 // ==========================================================================
-// 9. Interactive 3D Cursor-Following Character Physics 
+// 9. Interactive 3D Cursor-Following Avatar Physics
 // ==========================================================================
 function init3DAvatar() {
-  const card = document.getElementById('hero3DCard') || document.getElementById('avatar3DBody');
-  const bust = document.getElementById('hero3DBust') || document.getElementById('avatar3DPhoto');
-  const glare = document.getElementById('hero3DGlare') || document.getElementById('avatar3DGlare');
-  if (!card) return;
+  const container = document.getElementById('heroAvatar3D');
+  const card = document.getElementById('avatar3DBody');
+  const photo = document.getElementById('avatar3DPhoto');
+  const glare = document.getElementById('avatar3DGlare');
+  if (!container || !card) return;
 
   let mouseX = window.innerWidth / 2;
   let mouseY = window.innerHeight / 2;
@@ -543,69 +544,68 @@ function init3DAvatar() {
   let targetRotateY = 0;
   let isHovered = false;
 
-  // Track cursor movement across the viewport
+  // Track cursor movement
   window.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
 
-    const rect = card.getBoundingClientRect();
+    const rect = container.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
 
     const deltaX = (mouseX - centerX) / (window.innerWidth / 2);
     const deltaY = (mouseY - centerY) / (window.innerHeight / 2);
 
-    // Natural 3D head and bust rotation
-    targetRotateY = Math.max(-25, Math.min(25, deltaX * 24));
-    targetRotateX = Math.max(-20, Math.min(20, -deltaY * 20));
+    targetRotateY = Math.max(-28, Math.min(28, deltaX * 28));
+    targetRotateX = Math.max(-28, Math.min(28, -deltaY * 28));
   });
 
-  // Touch tracking for mobile & tablet
+  // Touch tracking for mobile
   window.addEventListener('touchmove', (e) => {
     if (e.touches.length > 0) {
       const touch = e.touches[0];
-      const rect = card.getBoundingClientRect();
+      const rect = container.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
       const deltaX = (touch.clientX - centerX) / (window.innerWidth / 2);
       const deltaY = (touch.clientY - centerY) / (window.innerHeight / 2);
-      targetRotateY = Math.max(-22, Math.min(22, deltaX * 22));
-      targetRotateX = Math.max(-18, Math.min(18, -deltaY * 18));
+      targetRotateY = Math.max(-25, Math.min(25, deltaX * 25));
+      targetRotateX = Math.max(-25, Math.min(25, -deltaY * 25));
     }
   }, { passive: true });
 
-  card.addEventListener('mouseenter', () => { isHovered = true; });
-  card.addEventListener('mouseleave', () => { isHovered = false; });
+  container.addEventListener('mouseenter', () => { isHovered = true; });
+  container.addEventListener('mouseleave', () => { isHovered = false; });
 
-  // 60FPS spring damping physics loop
+  // 60FPS spring physics loop
   let idleTimer = 0;
   function updatePhysics() {
-    idleTimer += 0.02;
-    const idleX = Math.sin(idleTimer) * 2.5;
-    const idleY = Math.cos(idleTimer * 0.75) * 2.5;
+    idleTimer += 0.025;
+    const idleX = Math.sin(idleTimer) * 3.5;
+    const idleY = Math.cos(idleTimer * 0.8) * 3.5;
 
     const finalTargetX = targetRotateX + (isHovered ? 0 : idleX);
     const finalTargetY = targetRotateY + (isHovered ? 0 : idleY);
 
     // Spring damping
-    currentRotateX += (finalTargetX - currentRotateX) * 0.08;
-    currentRotateY += (finalTargetY - currentRotateY) * 0.08;
+    currentRotateX += (finalTargetX - currentRotateX) * 0.09;
+    currentRotateY += (finalTargetY - currentRotateY) * 0.09;
 
-    // Apply 3D card rotation & subtle lift
-    card.style.transform = `rotateX(${currentRotateX.toFixed(2)}deg) rotateY(${currentRotateY.toFixed(2)}deg) translateZ(15px)`;
+    // Apply 3D card rotation
+    card.style.transform = `rotateX(${currentRotateX.toFixed(2)}deg) rotateY(${currentRotateY.toFixed(2)}deg) translateZ(12px)`;
 
-    // Apply parallax depth shift to inner 3D character bust
-    if (bust) {
-      const shiftX = (currentRotateY * 0.5).toFixed(2);
-      const shiftY = (-currentRotateX * 0.5).toFixed(2);
-      bust.style.transform = `translate3d(${shiftX}px, ${shiftY}px, 30px) scale(1.03)`;
+    // Apply depth parallax to inner photo
+    if (photo) {
+      const photoShiftX = (currentRotateY * 0.45).toFixed(2);
+      const photoShiftY = (-currentRotateX * 0.45).toFixed(2);
+      photo.style.transform = `translate3d(${photoShiftX}px, ${photoShiftY}px, 20px) scale(1.1)`;
     }
 
-    // Dynamic specular spotlight glare
+    // Dynamic specular glass glare
     if (glare) {
-      const glareX = 50 + currentRotateY * 1.5;
-      const glareY = 40 - currentRotateX * 1.5;
-      glare.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(0, 240, 192, 0.3) 0%, transparent 60%)`;
+      const glareX = 50 + currentRotateY * 1.6;
+      const glareY = 50 - currentRotateX * 1.6;
+      glare.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 65%)`;
     }
 
     requestAnimationFrame(updatePhysics);
