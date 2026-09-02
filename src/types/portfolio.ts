@@ -1,7 +1,6 @@
 export interface SemesterInfo {
   semester: string;
   spi: number;
-  maxSpi?: number | string;
   status: 'Completed' | 'In Progress' | 'Upcoming';
   highlight?: boolean;
 }
@@ -31,20 +30,19 @@ export interface SkillCategory {
 export interface Project {
   id: string;
   title: string;
-  type?: string;
-  category: 'Mobile App' | 'AI & Data' | 'Cybersecurity' | 'Web Development' | string;
+  category: 'Mobile App' | 'AI & Data' | 'Cybersecurity' | 'Web Development';
   badge?: string;
   shortDescription: string;
   fullDescription: string;
-  problem?: string;
-  solution?: string;
-  features: string[];
-  challenges?: string[];
-  learnings?: string[];
   technologies: string[];
   githubUrl: string;
   liveUrl?: string;
+  features: string[];
   architecture?: string[];
+  problem?: string;
+  solution?: string;
+  challenges?: string[];
+  learnings?: string[];
   isOpenSource?: boolean;
 }
 
@@ -90,28 +88,24 @@ export interface AchievementItem {
 
 export interface PersonalInfo {
   name: string;
-  formalName?: string;
-  fullName?: string;
-  role?: string;
-  subtitle?: string;
+  formalName: string;
   title: string;
   tagline: string;
-  shortIntro?: string;
   aboutText?: string;
+  shortIntro?: string;
+  bio?: string;
   institution: string;
   program: string;
   years: string;
   location: string;
   email: string;
   phone: string;
-  githubUrl: string;
   githubUsername: string;
+  githubUrl: string;
   linkedinUrl: string;
-  resumeDriveUrl?: string;
-  resumeUrl?: string;
-  latestSpi?: number;
-  averageSpi?: number;
-  stats?: any;
+  resumeDriveUrl: string;
+  latestSpi: number;
+  averageSpi: number;
 }
 
 export interface GitHubRepo {

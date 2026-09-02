@@ -1,68 +1,77 @@
 import React from 'react';
-import { FileText, Download, ExternalLink, CheckCircle2 } from 'lucide-react';
+import { FileText, Download, ExternalLink, Award, CheckCircle2, BookOpen } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export const ResumeSection: React.FC = () => {
   return (
-    <section className="py-12 sm:py-14 border-b border-white/10 bg-transparent relative">
+    <section id="resume" className="py-10 sm:py-14 border-b border-white/10 bg-transparent relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bento-spotlight p-6 sm:p-10 border-2 border-electric-cyan/50 shadow-2xl backdrop-blur-md">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        
+        {/* Bento Resume Container */}
+        <div className="bento-card p-6 sm:p-10 border-2 border-electric-cyan/40 shadow-2xl backdrop-blur-md">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
             
-            {/* Left Info */}
-            <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-cyan-950/80 border border-electric-cyan/40 text-xs font-mono text-electric-cyan font-bold shadow-glow-cyan">
-                <FileText className="w-4 h-4" />
+            {/* Left Content */}
+            <div className="lg:col-span-8 space-y-3.5 sm:space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-electric-cyan/40 text-[11px] sm:text-xs font-mono text-electric-cyan shadow-glow-cyan backdrop-blur-md">
+                <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 <span>OFFICIAL CURRICULUM VITAE</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-black text-white">
-                Download Academic & Technical Resume
+
+              <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white">
+                Download & Review <span className="text-electric-gradient">Official Resume</span>
               </h2>
-              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
-                Includes full semester SPI progression (Sem 1–4), Government Polytechnic Valsad coursework, verified internships from Microsoft & VOIS, and project architecture summaries.
+
+              <p className="text-xs sm:text-base text-slate-300 leading-relaxed max-w-2xl font-normal">
+                Structured document detailing complete academic history at Government Polytechnic Valsad, verified virtual internships with Microsoft & VOIS, and real open-source GitHub repositories.
               </p>
 
-              <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-slate-200 pt-1">
-                <div className="flex items-center gap-1.5 bg-obsidian-950/90 px-2.5 py-1 rounded-lg border border-white/15">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-electric-emerald" />
-                  <span className="font-bold">Latest SPI: 9.35</span>
+              {/* Highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-slate-300 pt-1">
+                <div className="flex items-center gap-2 p-2 rounded-lg bg-obsidian-950/80 border border-white/10">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-electric-emerald shrink-0" />
+                  <span className="truncate font-semibold">Updated with Semester 4 SPI (9.35)</span>
                 </div>
-                <div className="flex items-center gap-1.5 bg-obsidian-950/90 px-2.5 py-1 rounded-lg border border-white/15">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-electric-cyan" />
-                  <span className="font-bold">3 Industry Programs</span>
+                <div className="flex items-center gap-2 p-2 rounded-lg bg-obsidian-950/80 border border-white/10">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-electric-emerald shrink-0" />
+                  <span className="truncate font-semibold">Includes Verified Certificate IDs</span>
                 </div>
-                <div className="flex items-center gap-1.5 bg-obsidian-950/90 px-2.5 py-1 rounded-lg border border-white/15">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-purple-400" />
-                  <span className="font-bold">Rakshak Connect Repo</span>
-                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a
+                  href={personalInfo.resumeDriveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-electric inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 text-xs sm:text-sm font-black focus-ring"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Open Full PDF in Google Drive</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
               </div>
             </div>
 
-            {/* Right Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-              <a
-                href={personalInfo.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-electric inline-flex items-center justify-center gap-2 px-6 py-3 text-xs sm:text-sm font-extrabold shadow-glow-cyan focus-ring"
-              >
-                <Download className="w-4 h-4" />
-                <span>Download Resume (PDF)</span>
-              </a>
-
-              <a
-                href={personalInfo.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-obsidian-900/90 hover:bg-obsidian-800 border-2 border-white/20 hover:border-electric-cyan transition-all shadow-bento focus-ring backdrop-blur-md"
-              >
-                <span>Preview on Drive</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
+            {/* Right Document Badge */}
+            <div className="lg:col-span-4 flex justify-center">
+              <div className="w-full max-w-xs p-5 rounded-2xl bg-obsidian-950/90 border-2 border-white/15 text-center space-y-3 font-mono text-xs shadow-inner">
+                <div className="w-14 h-14 mx-auto rounded-2xl bg-cyan-950/90 border border-electric-cyan/50 flex items-center justify-center text-electric-cyan shadow-glow-cyan">
+                  <FileText className="w-7 h-7" />
+                </div>
+                <div>
+                  <div className="font-black text-sm text-white">{personalInfo.formalName}</div>
+                  <div className="text-[11px] text-slate-400 mt-0.5">Diploma in IT · 2024–2027</div>
+                </div>
+                <div className="p-2 rounded-lg bg-obsidian-900 border border-white/10 text-[10px] text-electric-emerald font-bold">
+                  PDF Document · Verified Drive Link
+                </div>
+              </div>
             </div>
 
           </div>
         </div>
+
       </div>
     </section>
   );

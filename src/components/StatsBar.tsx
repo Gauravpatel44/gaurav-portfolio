@@ -1,76 +1,72 @@
 import React from 'react';
-import { Code, Calendar, Briefcase, TrendingUp } from 'lucide-react';
+import { Award, FolderGit2, Calendar, ShieldCheck } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export const StatsBar: React.FC = () => {
   const stats = [
     {
-      value: personalInfo.stats.latestSpi,
-      label: "Latest SPI",
-      subLabel: "Sem 4 Academic",
-      icon: TrendingUp,
-      valueColor: "text-electric-cyan",
-      borderColor: "border-electric-cyan/40 hover:border-electric-cyan",
-      iconBg: "bg-cyan-950/80 text-electric-cyan border-electric-cyan/30"
+      icon: <Award className="w-5 h-5 text-electric-cyan" />,
+      value: `${personalInfo.latestSpi?.toFixed(2) || '9.35'}`,
+      label: 'Latest SPI (Sem 4)',
+      subtext: `Avg SPI: ${personalInfo.averageSpi?.toFixed(2) || '9.07'}`,
+      accent: 'border-electric-cyan/40 hover:border-electric-cyan',
+      glow: 'shadow-glow-cyan'
     },
     {
-      value: personalInfo.stats.projectsCount,
-      label: "GitHub Repos",
-      subLabel: "Flutter, ML & Python",
-      icon: Code,
-      valueColor: "text-electric-emerald",
-      borderColor: "border-electric-emerald/40 hover:border-electric-emerald",
-      iconBg: "bg-emerald-950/80 text-electric-emerald border-electric-emerald/30"
+      icon: <FolderGit2 className="w-5 h-5 text-electric-emerald" />,
+      value: '4+',
+      label: 'Real GitHub Repos',
+      subtext: 'Flutter, Python, AI Anomaly',
+      accent: 'border-electric-emerald/40 hover:border-electric-emerald',
+      glow: 'shadow-glow-emerald'
     },
     {
-      value: "3",
-      label: "Certificates",
-      subLabel: "Microsoft, VOIS, IBM",
-      icon: Briefcase,
-      valueColor: "text-purple-400",
-      borderColor: "border-purple-500/40 hover:border-purple-400",
-      iconBg: "bg-purple-950/80 text-purple-400 border-purple-500/30"
+      icon: <Calendar className="w-5 h-5 text-purple-400" />,
+      value: personalInfo.years || '2024 – 2027',
+      label: 'Diploma Journey',
+      subtext: 'GP Valsad (IT Branch)',
+      accent: 'border-purple-500/40 hover:border-purple-400',
+      glow: 'shadow-glow-purple'
     },
     {
-      value: "2024–27",
-      label: "Diploma",
-      subLabel: "GP Valsad IT",
-      icon: Calendar,
-      valueColor: "text-amber-400",
-      borderColor: "border-amber-500/40 hover:border-amber-400",
-      iconBg: "bg-amber-950/80 text-amber-400 border-amber-500/30"
+      icon: <ShieldCheck className="w-5 h-5 text-amber-400" />,
+      value: '3 Verified',
+      label: 'Certifications & Internships',
+      subtext: 'Microsoft, VOIS, IBM',
+      accent: 'border-amber-500/40 hover:border-amber-400',
+      glow: 'shadow-glow-amber'
     }
   ];
 
   return (
-    <section className="relative -mt-6 sm:-mt-8 z-20 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-      {/* 2x2 Grid on Mobile to cut vertical scrolling length in half */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
-        {stats.map((item, index) => {
-          const Icon = item.icon;
-          return (
+    <section className="py-6 sm:py-8 border-b border-white/10 bg-transparent relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          {stats.map((stat, index) => (
             <div
               key={index}
-              className={`bento-card p-3 sm:p-5 border-2 ${item.borderColor} flex flex-col sm:flex-row items-start sm:items-start justify-between gap-2 sm:gap-4 shadow-bento`}
+              className={`bento-card p-4 sm:p-5 border-2 ${stat.accent} transition-all duration-300 flex flex-col justify-between shadow-bento backdrop-blur-md`}
             >
-              <div className="space-y-0.5 sm:space-y-1">
-                <div className={`text-2xl sm:text-3xl md:text-4xl font-black tracking-tight font-mono ${item.valueColor} drop-shadow-md`}>
-                  {item.value}
-                </div>
-                <div className="text-xs sm:text-sm font-extrabold text-white tracking-wide leading-tight">
-                  {item.label}
-                </div>
-                <div className="text-[10px] sm:text-[11px] font-mono text-slate-400 leading-tight">
-                  {item.subLabel}
-                </div>
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="p-2 rounded-xl bg-obsidian-950/90 border border-white/15 shadow-inner">
+                  {stat.icon}
+                </span>
+                <span className="text-[10px] sm:text-xs font-mono font-bold text-slate-400 text-right truncate">
+                  {stat.label}
+                </span>
               </div>
 
-              <div className={`p-1.5 sm:p-2.5 rounded-lg sm:rounded-xl border shadow-inner ${item.iconBg} self-end sm:self-start`}>
-                <Icon className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
+              <div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-black font-mono tracking-tight text-white">
+                  {stat.value}
+                </div>
+                <div className="text-[11px] sm:text-xs text-slate-300 font-mono mt-0.5 truncate">
+                  {stat.subtext}
+                </div>
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );

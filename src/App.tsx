@@ -1,88 +1,49 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Navbar,
-  Hero,
-  StatsBar,
-  About,
-  Education,
-  Skills,
-  Projects,
-  Experience,
-  Certifications,
-  GitHubHub,
-  Achievements,
-  ResumeSection,
-  Contact,
-  Footer,
-  InteractiveBackground
-} from './components';
+import React from 'react';
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { StatsBar } from './components/StatsBar';
+import { About } from './components/About';
+import { Education } from './components/Education';
+import { Skills } from './components/Skills';
+import { Projects } from './components/Projects';
+import { Experience } from './components/Experience';
+import { Certifications } from './components/Certifications';
+import { GitHubHub } from './components/GitHubHub';
+import { Achievements } from './components/Achievements';
+import { ResumeSection } from './components/ResumeSection';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
+import { InteractiveBackground } from './components/InteractiveBackground';
 
-export const App: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<string>('hero');
-
-  useEffect(() => {
-    const sectionIds = [
-      'hero',
-      'about',
-      'education',
-      'skills',
-      'projects',
-      'experience',
-      'certifications',
-      'github',
-      'achievements',
-      'resume',
-      'contact',
-    ];
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
-
-      for (const id of sectionIds) {
-        const element = document.getElementById(id);
-        if (element) {
-          const top = element.offsetTop;
-          const height = element.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(id);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+export function App() {
   return (
-    <div className="min-h-screen bg-obsidian-950 text-slate-100 relative bg-deep-space selection:bg-cyan-500/30 selection:text-cyan-200 overflow-x-hidden">
-      {/* Live Interactive Cursor-Reactive Background */}
+    <div className="relative min-h-screen bg-obsidian-950 text-slate-100 font-sans selection:bg-electric-cyan/20 selection:text-electric-cyan overflow-x-hidden">
+      {/* Dynamic Pop-Up Grid Background Canvas */}
       <InteractiveBackground />
 
-      {/* Main Content Layer */}
-      <div className="relative z-10">
-        <Navbar activeSection={activeSection} />
-        
-        <main>
-          <Hero />
-          <StatsBar />
-          <About />
-          <Education />
-          <Skills />
-          <Projects />
-          <Experience />
-          <Certifications />
-          <GitHubHub />
-          <Achievements />
-          <ResumeSection />
-          <Contact />
-        </main>
+      {/* Floating Glass Navbar */}
+      <Navbar />
 
-        <Footer />
-      </div>
+      {/* Main Page Sections */}
+      <main className="relative z-10">
+        <Hero />
+        <StatsBar />
+        <About />
+        <Education />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Certifications />
+        <GitHubHub />
+        <Achievements />
+        <ResumeSection />
+        <Contact />
+      </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
-};
+}
 
 export default App;

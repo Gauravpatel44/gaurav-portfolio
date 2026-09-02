@@ -2,13 +2,13 @@ import React from 'react';
 import { 
   Briefcase, 
   Calendar, 
-  CheckCircle2, 
   Building2, 
   ExternalLink, 
-  Award, 
-  ChevronLeft, 
-  ChevronRight, 
-  Hand 
+  CheckCircle2, 
+  Sparkles,
+  ChevronLeft,
+  ChevronRight,
+  Hand
 } from 'lucide-react';
 import { experienceData } from '../data/portfolioData';
 import { useMobileCarousel } from '../hooks';
@@ -30,13 +30,13 @@ export const Experience: React.FC = () => {
         <div className="flex flex-col items-start mb-6 sm:mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-electric-cyan/40 text-[11px] sm:text-xs font-mono text-electric-cyan mb-2 shadow-glow-cyan backdrop-blur-md">
             <Briefcase className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            <span>INDUSTRY INITIATIVES & INTERNSHIPS</span>
+            <span>PRACTICAL INDUSTRY ENGAGEMENT</span>
           </div>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
-            Practical Experience & <span className="text-electric-gradient">Industry Programs</span>
+            Internships & <span className="text-electric-gradient">Industry Programs</span>
           </h2>
           <p className="text-slate-300 text-xs sm:text-base mt-1 max-w-2xl font-normal">
-            Formal technical initiatives and virtual internships completed with Microsoft AICTE, Vodafone Idea Foundation / VOIS, and BharatCares / IBM.
+            Formal technical internships and corporate-sponsored skill initiatives conducted in partnership with AICTE, Edunet, Microsoft & Vodafone Idea Foundation.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export const Experience: React.FC = () => {
           <div className="flex items-center justify-between px-1 mb-2.5 text-[11px] font-mono text-slate-400">
             <span className="flex items-center gap-1.5 text-electric-cyan font-bold">
               <Hand className="w-3.5 h-3.5 animate-pulse" />
-              <span>Swipe programs ({activeSlide + 1} of {experienceData.length})</span>
+              <span>Swipe internships ({activeSlide + 1} of {experienceData.length})</span>
             </span>
 
             <div className="flex items-center gap-1.5">
@@ -55,7 +55,7 @@ export const Experience: React.FC = () => {
                 onClick={() => scrollCarousel('left')}
                 disabled={activeSlide === 0}
                 className="p-1 rounded-lg bg-obsidian-900 border border-white/15 text-slate-300 disabled:opacity-40"
-                aria-label="Previous experience card"
+                aria-label="Previous experience"
               >
                 <ChevronLeft className="w-3.5 h-3.5" />
               </button>
@@ -63,7 +63,7 @@ export const Experience: React.FC = () => {
                 onClick={() => scrollCarousel('right')}
                 disabled={activeSlide >= experienceData.length - 1}
                 className="p-1 rounded-lg bg-obsidian-900 border border-white/15 text-slate-300 disabled:opacity-40"
-                aria-label="Next experience card"
+                aria-label="Next experience"
               >
                 <ChevronRight className="w-3.5 h-3.5" />
               </button>
@@ -76,80 +76,58 @@ export const Experience: React.FC = () => {
             onScroll={handleScroll}
             className="flex overflow-x-auto snap-x snap-mandatory gap-3.5 pb-3 px-1 scrollbar-none scroll-smooth"
           >
-            {experienceData.map((item) => (
+            {experienceData.map((exp) => (
               <div
-                key={item.id}
-                className="w-[86vw] max-w-[340px] flex-shrink-0 snap-center bento-card p-5 border-2 border-white/15 hover:border-electric-cyan/60 flex flex-col justify-between shadow-bento backdrop-blur-md space-y-3.5"
+                key={exp.id}
+                className="w-[86vw] max-w-[340px] flex-shrink-0 snap-center bento-card p-4 border-2 border-white/15 hover:border-electric-cyan/60 flex flex-col justify-between shadow-bento group backdrop-blur-md"
               >
-                <div className="space-y-3">
-                  {/* Header */}
-                  <div className="space-y-1">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="text-base font-black text-white truncate">
-                        {item.organization}
-                      </span>
-                      <span className="text-[10px] font-mono font-black text-electric-cyan bg-cyan-950/90 px-2 py-0.5 rounded-md border border-electric-cyan/40 shrink-0">
-                        {item.type}
-                      </span>
-                    </div>
-                    <h3 className="text-xs sm:text-sm font-bold text-electric-cyan">
-                      {item.role}
-                    </h3>
-                  </div>
-
-                  {/* Duration & Dates */}
-                  <div className="flex items-center justify-between text-[10px] font-mono text-slate-300 bg-obsidian-950/80 p-2 rounded-lg border border-white/10">
-                    <span className="text-electric-emerald font-bold">{item.duration}</span>
-                    <span className="flex items-center gap-1 text-slate-400 font-medium">
-                      <Calendar className="w-3 h-3" />
-                      {item.dateRange}
+                <div>
+                  <div className="flex items-center justify-between gap-2 pb-2.5 border-b border-white/15 mb-2.5">
+                    <span className="text-[10px] font-mono font-bold text-electric-cyan bg-cyan-950/80 px-2 py-0.5 rounded-md border border-electric-cyan/40">
+                      {exp.type}
+                    </span>
+                    <span className="text-[10px] font-mono text-slate-400">
+                      {exp.duration}
                     </span>
                   </div>
 
-                  {/* Partner Details */}
-                  {item.partner && (
-                    <div className="p-2.5 rounded-xl bg-obsidian-950/90 border border-white/15 text-[11px] font-mono text-slate-200 flex items-start gap-2 shadow-inner">
-                      <Building2 className="w-3.5 h-3.5 text-electric-cyan shrink-0 mt-0.5" />
-                      <span className="line-clamp-2">Partner: <strong className="text-white font-bold">{item.partner}</strong></span>
-                    </div>
-                  )}
+                  <h3 className="text-base font-black text-white group-hover:text-electric-cyan transition-colors mb-1 truncate">
+                    {exp.role}
+                  </h3>
 
-                  {/* Description */}
-                  <p className="text-[11px] text-slate-300 leading-relaxed font-normal line-clamp-3">
-                    {item.description}
+                  <div className="text-xs font-bold text-electric-emerald mb-1 truncate">
+                    {exp.organization}
+                  </div>
+
+                  <div className="flex items-center gap-1 text-[11px] font-mono text-slate-400 mb-2.5">
+                    <Calendar className="w-3 h-3 text-electric-cyan shrink-0" />
+                    <span>{exp.dateRange}</span>
+                  </div>
+
+                  <p className="text-xs text-slate-300 line-clamp-3 mb-3 leading-relaxed">
+                    {exp.description}
                   </p>
 
-                  {/* Highlights */}
-                  <div className="space-y-1.5 pt-2 border-t border-white/15">
-                    {item.highlights.slice(0, 2).map((h, i) => (
-                      <div
-                        key={i}
-                        className="flex items-start gap-1.5 text-[10px] text-slate-200 p-2 rounded-lg bg-obsidian-950/80 border border-white/10"
-                      >
+                  <div className="space-y-1">
+                    {exp.highlights.slice(0, 2).map((high, idx) => (
+                      <div key={idx} className="flex items-start gap-1.5 text-[11px] text-slate-300 font-mono">
                         <CheckCircle2 className="w-3 h-3 text-electric-emerald shrink-0 mt-0.5" />
-                        <span className="font-semibold line-clamp-2">{h}</span>
+                        <span className="line-clamp-1">{high}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Certificate CTA */}
-                {item.certificateUrl && (
-                  <div className="pt-2 border-t border-white/15 flex items-center justify-between text-xs">
-                    <span className="font-mono text-electric-emerald flex items-center gap-1 font-bold text-[10px]">
-                      <CheckCircle2 className="w-3 h-3" />
-                      <span>Verified Record</span>
-                    </span>
-
+                {exp.certificateUrl && (
+                  <div className="pt-3 border-t border-white/15 mt-3">
                     <a
-                      href={item.certificateUrl}
+                      href={exp.certificateUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-electric inline-flex items-center gap-1 px-3 py-1 text-[11px] font-black"
+                      className="btn-electric w-full py-1.5 rounded-xl text-[11px] font-extrabold flex items-center justify-center gap-1.5"
                     >
-                      <Award className="w-3 h-3" />
-                      <span>Certificate</span>
-                      <ExternalLink className="w-2.5 h-2.5" />
+                      <span>Verified Credential</span>
+                      <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>
                 )}
@@ -168,88 +146,67 @@ export const Experience: React.FC = () => {
                     ? 'w-6 bg-gradient-to-r from-electric-cyan to-electric-emerald shadow-glow-cyan' 
                     : 'w-1.5 bg-slate-700 hover:bg-slate-500'
                 }`}
-                aria-label={`Go to program ${i + 1}`}
+                aria-label={`Go to experience ${i + 1}`}
               />
             ))}
           </div>
 
         </div>
 
-        {/* DESKTOP VIEW (>= md screens) */}
-        <div className="hidden md:block space-y-4 max-w-4xl">
-          {experienceData.map((item) => (
+        {/* DESKTOP BENTO GRID VIEW (>= md screens) */}
+        <div className="hidden md:grid md:grid-cols-3 gap-5">
+          {experienceData.map((exp) => (
             <div
-              key={item.id}
-              className="bento-card p-6 sm:p-7 border-2 border-white/15 hover:border-electric-cyan/60 transition-all duration-300 space-y-4 shadow-bento backdrop-blur-md"
+              key={exp.id}
+              className="bento-card p-6 border-2 border-white/15 hover:border-electric-cyan/60 flex flex-col justify-between shadow-bento group backdrop-blur-md transition-all duration-300"
             >
-              {/* Header */}
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <div className="flex items-center gap-2.5">
-                    <span className="text-lg sm:text-xl font-black text-white">
-                      {item.organization}
-                    </span>
-                    <span className="text-[10px] font-mono font-black text-electric-cyan bg-cyan-950/90 px-2.5 py-0.5 rounded-md border border-electric-cyan/40">
-                      {item.type}
-                    </span>
-                  </div>
-                  <h3 className="text-sm sm:text-base font-bold text-electric-cyan mt-0.5">
-                    {item.role}
-                  </h3>
+              <div>
+                <div className="flex items-center justify-between gap-2 pb-3 border-b border-white/15 mb-3.5">
+                  <span className="text-xs font-mono font-bold text-electric-cyan bg-cyan-950/80 px-2.5 py-0.5 rounded-md border border-electric-cyan/40">
+                    {exp.type}
+                  </span>
+                  <span className="text-xs font-mono text-slate-400">
+                    {exp.duration}
+                  </span>
                 </div>
 
-                <div className="flex flex-col sm:items-end font-mono text-xs">
-                  <span className="text-electric-emerald font-black bg-emerald-950/80 px-2.5 py-0.5 rounded-md border border-electric-emerald/40">{item.duration}</span>
-                  <span className="text-slate-400 mt-1 flex items-center gap-1 font-semibold text-[11px]">
-                    <Calendar className="w-3 h-3" />
-                    {item.dateRange}
-                  </span>
+                <h3 className="text-lg font-black text-white group-hover:text-electric-cyan transition-colors mb-1.5">
+                  {exp.role}
+                </h3>
+
+                <div className="text-xs font-bold text-electric-emerald mb-2">
+                  {exp.organization}
+                </div>
+
+                <div className="flex items-center gap-1.5 text-xs font-mono text-slate-400 mb-3.5">
+                  <Calendar className="w-3.5 h-3.5 text-electric-cyan" />
+                  <span>{exp.dateRange}</span>
+                </div>
+
+                <p className="text-xs text-slate-300 line-clamp-3 mb-4 leading-relaxed">
+                  {exp.description}
+                </p>
+
+                <div className="space-y-1.5 mb-4">
+                  {exp.highlights.map((high, idx) => (
+                    <div key={idx} className="flex items-start gap-2 text-xs text-slate-300 font-mono">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-electric-emerald shrink-0 mt-0.5" />
+                      <span>{high}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Partner Details */}
-              {item.partner && (
-                <div className="p-3 rounded-xl bg-obsidian-950/90 border border-white/15 text-xs font-mono text-slate-200 flex items-center gap-2.5 shadow-inner">
-                  <Building2 className="w-4 h-4 text-electric-cyan shrink-0" />
-                  <span>Partner: <strong className="text-white font-bold">{item.partner}</strong></span>
-                </div>
-              )}
-
-              {/* Description */}
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-                {item.description}
-              </p>
-
-              {/* Highlights */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2 border-t border-white/15">
-                {item.highlights.map((h, i) => (
-                  <div
-                    key={i}
-                    className="flex items-start gap-2 text-xs text-slate-200 p-2.5 rounded-lg bg-obsidian-950/80 border border-white/10"
-                  >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-electric-emerald shrink-0 mt-0.5" />
-                    <span className="font-semibold">{h}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Certificate CTA */}
-              {item.certificateUrl && (
-                <div className="pt-2 border-t border-white/15 flex items-center justify-between text-xs">
-                  <span className="font-mono text-electric-emerald flex items-center gap-1.5 font-bold text-[11px]">
-                    <CheckCircle2 className="w-3.5 h-3.5" />
-                    <span>Verified Completion Document</span>
-                  </span>
-
+              {exp.certificateUrl && (
+                <div className="pt-3 border-t border-white/15 mt-2">
                   <a
-                    href={item.certificateUrl}
+                    href={exp.certificateUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-electric inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-black"
+                    className="btn-electric w-full py-2 rounded-xl text-xs font-extrabold flex items-center justify-center gap-2"
                   >
-                    <Award className="w-3.5 h-3.5" />
-                    <span>View Official Certificate</span>
-                    <ExternalLink className="w-3 h-3" />
+                    <span>View Verified Credential</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
               )}
