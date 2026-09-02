@@ -6,7 +6,7 @@ Built exclusively with **pure HTML5, CSS3, and Vanilla JavaScript** — zero bui
 
 ---
 
-## 🏗️ Architecture & Directory Structure
+## Architecture & Directory Structure
 
 ```text
 Portfolio/
@@ -36,17 +36,18 @@ Portfolio/
 
 ---
 
-## ⚡ Tech Stack
+## Tech Stack
 
+- **Design System**: Material 3 & Google-Inspired Design System (Light Mode Primary, Dark Mode Support)
 - **Markup**: Pure Semantic HTML5
-- **Styling**: Vanilla CSS3 (Custom Design System with CSS Variables, Bento Cards, Glassmorphism, Micro-animations)
-- **Scripting**: Vanilla JavaScript (ES6+, Canvas 2D Physics, DOM event listeners, Fetch API)
+- **Styling**: Vanilla CSS3 (Custom Design System with CSS Variables, Surface Elevation, Zero Emojis)
+- **Scripting**: Vanilla JavaScript (ES6+, DOM event listeners, Fetch API)
 - **Fonts**: Inter & JetBrains Mono (Google Fonts)
 - **Deployment**: GitHub Pages (Static Hosting)
 
 ---
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 Because this project is built with standard web technologies, **no build step or `npm install` is needed**.
 
@@ -67,7 +68,7 @@ Visit `http://localhost:8000` in your browser.
 
 ---
 
-## 👤 Profile Information
+## Profile Information
 
 - **Name**: Gaurav Patel (Patel Gaurav Dinesh)
 - **Institution**: Government Polytechnic Valsad (Diploma in IT, 2024–2027)
